@@ -1,0 +1,38 @@
+.navbar{
+    background: rgba(1, 17, 64, 1);
+    height: 70px;
+    width: 100%;
+    position: fixed;
+}
+.navbar .navbar-nav .nav-item a {
+    padding: 15px;
+    color: #e7e7e7;
+}
+.navbar .navbar-nav .nav-item a:hover {
+    color: rgba(248, 161, 36, 1);
+}
+.navbar .navbar-nav .nav-but {
+    padding: 10px;
+}
+.navbar-nav{
+    margin-right: 30px;
+}
+.solid{
+    color: #e7e7e7;
+}
+.dropdown-menu .dropdown-item {
+    background: rgba(1, 17, 64, 1);
+    border-style: 0;
+}
+.navbar-toggler-icon {
+    background-color: rgba(1, 17, 64, 1);
+    color: #e7e7e7;
+}
+.navbar-toggler.collapsed {
+    color: rgba(1, 17, 64, 1);
+    border: 0;
+}
+.navbar-toggler-icon {
+    color: #e7e7e7 !important;
+} 
+/* End Nav */
