@@ -11,7 +11,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500&display=swap" rel="stylesheet">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif&family=Nunito:wght@500&display=swap"
+        rel="stylesheet">
+
     <link rel="stylesheet" href="./public/css/nav.css">
     <link rel="stylesheet" href="./public/css/homepage.css">
 
@@ -20,145 +22,104 @@
 </head>
 
 <body>
-    
-    <nav class="navbar">
-        <a href="#" class="logo">LYCEE VIVIANI</a>
-        <div class="nav-links">
-            <ul>
-                <li class="active">
-                    <a href="#">HOME</a>
-                    
-                </li>
-                <div class="dropdown">
-                    <a class="btn dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        LE LYCÉE
-                    </a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <a class="dropdown-item" href="#">Actualités</a>
+    <!-- Start Header -->
+    <header>
+        <!-- Start Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">
+                    <span class="logo">Lycée</span>
+                    <span class="logo-text">VIVIANI</span>
+                </a>
+
+                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="toggler-icon top-bar"></span>
+                    <span class="toggler-icon middle-bar"></span>
+                    <span class="toggler-icon bottom-bar"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Lycée</a>
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                LE LYCÉE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Actualités</a></li>
+                                <li><a class="dropdown-item" href="#">A Propos</a></li>
+                                <li><a class="dropdown-item" href="#">Gallerie</a></li>
+                            </ul>
                         </li>
-                        <li>
-                            <a class="dropdown-item" href="#">Galerie</a>
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                FORMATIONS
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Formation 1</a></li>
+                                <li><a class="dropdown-item" href="#">Formation 2</a></li>
+                                <li><a class="dropdown-item" href="#">Formation 3</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                VIE AU LYCÉE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">C.D.I</a></li>
+                                <li><a class="dropdown-item" href="#">Internat</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown mx-2">
+                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                APPRENTISSAGE
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                            </ul>
                         </li>
                     </ul>
+                    <div class="d-flex">
+                        <button class="btn btn-outline-light mx-2" type="submit">
+                            <i class="fa-solid fa-envelope"></i> <span>Contact</span>
+                        </button>
+                        <button class="btn btn-outline-light mx-2" type="submit">
+                            <i class="fa-solid fa-user"></i> <span>Compte</span>
+                        </button>
+                    </div>
+
+
                 </div>
-
-                <li>
-                    <a href="#">FORMATIONS</a>
-                    <!-- <ul class="dropdown-menu">
-                        <li>
-                            <a href="#">BAC</a>
-                        </li>
-                        <li>
-                            <a href="#">CAP</a>
-                        </li>
-                        <li>
-                            <a href="#">Mentions Complémentaires</a>
-                        </li>
-
-                    </ul> -->
-                </li>
-                <li><a href="#">VIE AU LYCÉE</a></li>
-                <li><a href="#">APPRENTISSAGE</a></li>
-                <li><a href="#">CONTACT</a></li>
-                <li><a href="#">LOG IN</a></li>
-            </ul>     
-        </div>
-        <div>
-          
-        </div>
-        <img src="./public/img/burger.png" alt="menu" class="menu-mb">
-    </nav>
-        
-    </header><header>
-    <div class="overlay">
-            <picture>
-                <img srcset="./public/img/header_mobile-480w.jpg 600w,
-                ./public/img/header_pc-800w.jpg 800w" 
-                src="./public/img/header_pc.jpg" alt="">
-            </picture>
-        </div>
-    <!-- Navbar
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">
-                <img src="./public/img/logo.png" alt="Logo" style="height: 200px; width: 250px;">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown active" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            LE LYCÉE
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Blog</a></li>
-                            <li><a class="dropdown-item" href="#">A Propos</a></li>
-                            <li><a class="dropdown-item" href="#">Galerie</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown active" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            FORMATIONS
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">BAC Commerce</a></li>
-                            <li><a class="dropdown-item" href="#">CAP vente</a></li>
-                            <li><a class="dropdown-item" href="#">Mentions complémentaire</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown active" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            VIE AU LYCÉE
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown active" href="#" role="button" data-bs-toggle="dropdown"
-                            aria-expanded="false">
-                            APPRENTISSAGE
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-but">
-                        <a class="solid" href="#">
-                            <i class="fa-solid fa-envelope"></i>
-                        </a>
-                    </li>
-                    <li class="nav-but">
-                        <a class="solid" href="#">
-                            <i class="fa-solid fa-user"></i>
-                        </a>
-                    </li>
-                </ul>
             </div>
-        </div>
-    </nav> -->
+        </nav>
+        <!-- End Navbar -->
+
+        <!-- Start 1st Section -->
+        <div class="overlay">
+                <picture>
+                    <img srcset="./public/img/header_mobile-480w.jpg 600w,
+                        ./public/img/header_pc-800w.jpg 800w" src="./public/img/header_pc.jpg" alt="">
+                </picture>
+            </div>
+        <!-- End 1st Section -->
+
+
+
+    </header>
+    <!-- End Header -->
+
+
     
+
+
     <section class="text">
         <h1 class="">
             <span class="auto-typing"></span>
@@ -172,8 +133,7 @@
         <div class="overlay">
             <picture>
                 <img srcset="./public/img/header_mobile-480w.jpg 600w,
-                ./public/img/header_pc-800w.jpg 800w" 
-                src="./public/img/header_pc.jpg" alt="">
+                ./public/img/header_pc-800w.jpg 800w" src="./public/img/header_pc.jpg" alt="">
             </picture>
         </div>
     </section>
@@ -184,7 +144,7 @@
     <!-- Main -->
     <!-- Start Section Trading -->
 
-    
+
 
     <!-- End section Trading -->
 

@@ -1,0 +1,78 @@
+*{
+ font-family: 'Nunito', sans-serif;
+}
+.auth{
+    background-image: url('../img/login.jpg');
+    background-size: 60vw 100vh;
+    background-repeat: no-repeat;
+    background-color: #000000;
+    top: 0;
+    height: 100vh;
+    font-family: 'Nunito', sans-serif;
+}
+.input {
+    float: right;
+    width: 30%;
+    margin-right: 5%;
+    margin-top: 10%;
+    padding: 20px;   
+  }
+.title{
+    color: rgba(248, 161, 36, 1);
+    font-weight: 900;
+    font-size: 2rem;
+}
+.sous-title {
+    color: #e7e7e79e;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.bloc-text{
+    margin-bottom: 30px;
+}
+.form-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: #e7e7e7b7;
+}
+.form-control{
+    background: rgba(151, 151, 159, 0.084) !important;
+    border: 1px solid rgba(151, 151, 159, 0.084) !important;
+    color: #e7e7e7 !important;
+}
+.form-control:focus{
+    border-color: rgba(248, 161, 36, 1) !important;
+    box-shadow: 0 0 0 .05rem rgba(248, 161, 36, 1) !important;
+}
+.btn {
+    background: rgba(248, 160, 36, 0.796) !important;
+    color: #ffff !important;
+    margin-top: 10px;  
+}
+.btn a {
+    text-decoration: none;color: #e7e7e7;
+}
+.btn a:hover{
+    color: rgba(248, 161, 36, 1) !important;
+    font-weight: bold;
+}
+.btn:hover{
+    background: transparent !important;
+    color: rgba(248, 161, 36, 1) !important;
+    font-weight: bold;
+}
+#btn{
+    background: rgba(1, 17, 64, 0.844) !important;
+}
+#btn:hover{
+    background: transparent !important;
+}
+ #btn a{
+    text-decoration: none;
+    color: #e7e7e7;
+}
+.row #btn a:hover{
+    background: transparent;
+    color: rgba(1, 17, 64, 1) !important;
+} 
+
