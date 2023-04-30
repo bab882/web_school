@@ -3,6 +3,7 @@
     background: rgba(1, 17, 64, 1) !important;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 1);
     font-family: 'Nunito', sans-serif;
+    position: static;
 }
 .active{
     color: rgba(231, 231, 231, 1) !important;
@@ -75,18 +76,10 @@
     background-color: #e7e7e7;
 }
 .logo {
+    height: 80px;
     margin-left: 100px;
-    color: rgba(248, 161, 36, 1);
-    font-weight: 900;
-    font-size: 2rem;
-    font-family: 'Instrument Serif', serif;
 }
-.logo-text {
-    color: rgba(231, 231, 231, 1);
-    font-weight: 700;
-    font-size: 2rem;
-    font-family: 'Instrument Serif', serif;
-}
+
 .btn-gorup {
     margin-right: 100px;
 }

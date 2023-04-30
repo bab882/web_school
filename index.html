@@ -23,15 +23,12 @@
 
 <body>
     <!-- Start Header -->
-    <header>
+    <header class="header">
+
         <!-- Start Navbar -->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <span class="logo">Lycée</span>
-                    <span class="logo-text">VIVIANI</span>
-                </a>
-
+                <img src="./public/img/logo-viviani.png" class="logo" alt="logo">
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -102,25 +99,53 @@
         </nav>
         <!-- End Navbar -->
 
-        <!-- Start 1st Section -->
-        <div class="overlay">
-            <picture>
-                <img srcset="./public/img/header_mobile-480w.jpg 600w,
-                        ./public/img/header_pc-800w.jpg 800w" src="./public/img/header_pc.jpg" alt="">
-            </picture>
+        <!-- Start Content -->
+        <div class="wrapper" style="background-image: url(./public/img/viviani.png);">
+            <div class="color-overlay d-flex justify-content-center align-items-center">
+                <h1 class="">Lycee Viviani</h1>
+                <p class="subtitle ">
+                    Lorem Ipsum is simply dummy text of the printing and <br>
+                    typesetting industry. Lorem Ipsum has been the industry's <br>
+                    standard dummy text ever since the 1500s, when an
+                </p>    
+            </div>
+            <button type="button" class="btn btn-warning">
+                <a href="#">A Propos</a>
+            </button>
+
+
         </div>
-        <!-- End 1st Section -->
-
-
-
+        <!-- End Content -->
     </header>
     <!-- End Header -->
 
+    <!-- Start Main -->
+    <h2>Nos Formations</h2>
+    <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam cumque eos earum ab magni voluptates illo. Sapiente voluptatum minima quam itaque veniam at ut omnis excepturi dolores cupiditate! Asperiores, voluptatem?</span>
+
+
+    <section class="container">
+        <div class="row g-3">
+            <diV class="col-sm-8 col-md-3">
+                test
+            </diV>
+            <diV class="col-sm-8 col-md-3">
+                test
+            </diV>
+            <diV class="col-sm-8 col-md-3">
+                test
+            </diV>
+            <diV class="col-sm-8 col-md-3">
+                test
+            </diV>
+        </div>
+    </section>
+    <!-- End Main -->
 
 
 
 
-    <section class="text">
+    <!-- <section class="text">
         <h1 class="">
             <span class="auto-typing"></span>
         </h1>
@@ -136,7 +161,7 @@
                 ./public/img/header_pc-800w.jpg 800w" src="./public/img/header_pc.jpg" alt="">
             </picture>
         </div>
-    </section>
+    </section> -->
 
     <!-- End Navbar -->
 
