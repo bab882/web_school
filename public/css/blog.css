@@ -13,10 +13,10 @@ body {
     font-family: 'Nunito', sans-serif;
     font-weight:bold;
     padding-bottom: 70px;
-    text-shadow: 5px 6px 10px #000;
+    text-shadow: 2px 2px 5px #000;
 }
 .subtitle-blog {
-    color: rgb(1, 17, 64);
+    color: rgba(1, 17, 64, 0.571);
     line-height: 40px;
     font-size: 15px;
     font-weight: 700;
