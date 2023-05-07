@@ -1,0 +1,49 @@
+header {
+    background: rgba(255, 0, 0, 0.516);
+}
+.contact__header{
+    padding-top: 400px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 45vh;
+    position: relative;
+    color: white;
+}
+.contact__header h2 {
+    font-size: 4rem;
+    font-weight: ;
+    font-family: 'Nunito', sans-serif;
+}
+.contact__title p {
+    margin: 100px 0 80px ;
+    color: #e7e7e7;
+    font-size: 1.5rem;
+    
+}
+.contact__content {
+    background-color: rgba(1, 17, 64, 1);
+    padding: 100px;
+    position: relative;
+    height: 60vh;    
+}
+.contact__content h1 {
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(248, 161, 36, 1);
+    letter-spacing: 2px;
+}
+.contact__card {
+    background-color: #fff;
+    position: absolute;
+    border-radius: 10px;
+    margin-right: 100px;
+    border: 0.5px solid black;
+    width: 429px;
+    margin-top: 100px;
+    
+}
+.contact__title {
+    border-bottom: 2px solid white;
+}

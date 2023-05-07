@@ -2,6 +2,7 @@ body {
     background-color: #e7e7e7;
     color: #e7e7e7;
 }
+/* ======== Start Blog ========== */
 #blog{
     padding-top: 160px;
     
@@ -59,3 +60,23 @@ body {
 .btn-blog:hover {
     color: rgba(248, 161, 36, 1);
 }
+/* ======== End Blog ========== */
+
+/* ======== Start Article Blog ========== */
+
+main{
+    padding-top: 100px;
+}
+.blog_left img {
+    width: 800px;
+    height: 350px;
+    margin-left: 90px;
+}
+.article {
+    color: rgb(1, 17, 64);
+    text-align: center;
+    font-size: 15px;
+    font-weight: 500;
+}
+
+
