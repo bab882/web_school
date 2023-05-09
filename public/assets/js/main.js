@@ -31,5 +31,10 @@ document.addEventListener("wheel", (e) => {
     bulle.style.transition = "0.15s"
 });
 
+function activateIcon(id) {
+    var icon = document.getElementById("icon" + id.substring(4));
+    icon.classList.add("active");
+  }
+
 
 

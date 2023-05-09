@@ -1,0 +1,119 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact
+{% endblock %}
+
+{% block body %}
+
+	<!-- Start Header -->
+	<header>
+
+
+		<!-- Start Image Header -->
+		<div class="contact__header" style="background-image: url('{{ asset('assets/img/contact-header.png')}}');">
+			<div class="color-overlay d-flex justify-content-center align-items-center">
+				<div class="container">
+					<div class="row">
+						<h2 class="text-center">Contactez-nous</h2>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Image Header -->
+
+		<div class="container-fluid  contact__content">
+			<div class="row justify-content-between  p-3">
+				<div class="col-md-6">
+					<div class="contact__title">
+						<h1>Comment Pouvons Nous Vous Aidez ?</h1>
+						<p>Ensemble, explorons les moyens de vous accompagner vers la réussite : bienvenue au lycée !</p>
+
+					</div>
+					<div class="row ">
+						<h5 class="text-dark text-center text-uppercase">Consultation en Ligne</h5>
+						<h3 class="text-light text-center">
+							<span class="fa fa-phone text-warning"></span>
+							&nbsp; 03 29 35 29 85</h3>
+					</div>
+
+
+				</div>
+
+
+				<!-- Start section right -->
+				<div class="col-sm-9 col-md-4">
+					<form class="contact__card ">
+						<div class="row d-flex justify-content-center">
+							<h3 class="py-4 text-dark text-center">Parler nous de vous</h3>
+							<!-- Start Lastname -->
+							<div class="col-5  mb-0">
+								<label for="contact@gmail.com" class="form-label"></label>
+								<input type="lastname" class="form-control text-center" id="lastname" aria-describedby="lastnameHelp" placeholder="Entrer votre nom">
+							</div>
+							<!-- End Lastname -->
+
+							<!-- Start Firstname -->
+							<div class="col-5  mb-0">
+								<label for="contact@gmail.com" class="form-label"></label>
+								<input type="firstname" class="form-control text-center" id="firstname" aria-describedby="firstnameHelp" placeholder="Entrer votre prénom">
+							</div>
+							<!-- End Firstname -->
+
+							<!-- Start Email -->
+							<div class="col-10  mb-0">
+								<label for="chanitebrandon@gmail.com" class="form-label"></label>
+								<input type="email" class="form-control text-center" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Entrer votre adresse Email">
+							</div>
+							<!-- End Email -->
+
+							<!-- Start Message -->
+							<div class="col-10 mb-5">
+								<label for="exampleFormControlTextarea1" class="form-label"></label>
+								<textarea class="form-control text-center" id="exampleFormControlTextarea1" rows="10" placeholder="Entrer votre message .."></textarea>
+							</div>
+							<!-- End Message -->
+
+							<!-- Start Submit -->
+							<div class="d-flex justify-content-center mb-3 pb-5">
+								<a href="#" class="btn btn-warning col-10" type="submit">Envoyer</a>
+							</div>
+							<!-- End Submit -->
+
+
+						</div>
+					</form>
+				</div>
+				<!-- End section right -->
+			</div>
+		</div>
+	</div>
+</header>
+<!-- End Header -->
+
+<!-- Start Section Map -->
+<section class="container map bg-primary">
+	<h2 class="text-center">Où nous trouver</h2>
+	<div class="row">
+
+		<div class="col-12 mapping">
+			<img src="{{ asset('assets/img/map.webp')}}" alt="">
+			<a href="https://www.google.fr/maps/place/Lyc%C3%A9e+Isabelle+Viviani/@48.1629309,6.4470714,17z/data=!3m1!4b1!4m6!3m5!1s0x4793a0972c474f61:0xf7bc5d0555fb6314!8m2!3d48.1629274!4d6.4496463!16s%2Fg%2F1tj20glc">
+				<i class="fa fa-location-dot"></a>
+			</i>
+		</div>
+
+
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<div class="col-2">
+        Ouvert
+        <div class="planning">
+        
+        </div>
+        </div>
+		<div class="col-2">address</div>
+		
+	</div>
+
+
+</section>{% endblock %}

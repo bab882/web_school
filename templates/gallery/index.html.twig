@@ -1,0 +1,54 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Galerie
+{% endblock %}
+
+{% block body %}
+
+<section id="gallery">
+    <div class="container-fluid ">
+        <div class="row justify-content-start p-4">
+			<div class="col-12 title-gallery">
+				<h1 class=" d-inline-flex">Galerie Photo</h1>
+			</div>
+			<div class="col-6 content-gallery pt-5">
+			<p class="mb-5 d-flex justify-content-start">Venez vivre des expériences inoubliables en découvrant les projets et sorties de notre lycée professionnel une formation complète qui ouvre des portes vers l'avenir ! 
+			</p>
+			</div>         
+        </div>
+        
+    </div>
+    
+
+    <div class="container-fluid">
+        <div class="row galery p-5">
+            <div class="column">
+                <img src="{{ asset('assets/img/login.jpg') }}" class="img-fluid" alt="">
+                <img src=".{{ asset('assets/img/formations.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/contact.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/course-two.jpg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="column mt-md-5 ">
+                <img src="{{ asset('assets/img/login.jpg') }}" class="img-fluid" alt="">
+                <img src=".{{ asset('assets/img/formations.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/contact.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/course-two.jpg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="column">
+                <img src="{{ asset('assets/img/login.jpg') }}" class="img-fluid" alt="">
+                <img src=".{{ asset('assets/img/formations.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/contact.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/course-two.jpg') }}" class="img-fluid" alt="">
+            </div>
+            <div class="column mt-md-5">
+                <img src="{{ asset('assets/img/login.jpg') }}" class="img-fluid" alt="">
+                <img src=".{{ asset('assets/img/formations.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/contact.jpg') }}" class="img-fluid" alt="">
+                <img src="{{ asset('assets/img/course-two.jpg') }}" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+
+{% endblock %}

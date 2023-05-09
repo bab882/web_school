@@ -22,84 +22,93 @@
 
 <body>
 
-
+<!-- Start Navbar -->
+        <nav class="menu">
+        
+            <div class="logo">VIVIANI</div> 
+            <label class="menu-mb" for="btn">
+                <span class="fa fa-bars-staggered"></span>
+            </label>
+            <input type="checkbox" id="btn">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    
+                    <li>
+                        <label for="btn-1" class="burger">LE LYCÉE</label>
+                        <a href="#">LE LYCÉE</a>
+                        <input type="checkbox" id="btn-1">
+                        <ul>
+                            <li><a href="#">Actualité</a></li>
+                            <li><a href="#">A Propos</a></li>
+                            <li><a href="#">Galerie</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-2" class="burger">FORMATIONS</label>
+                        <a href="#">FORMATIONS</a>
+                        <input type="checkbox" id="btn-2">
+                        <ul>
+                            <li>
+                                <label for="btn-3" class="burger">Cap</label>
+                                <a href="#">Cap</a>
+                                <input type="checkbox" id="btn-3">
+                            <ul>
+                                <li><a href="#">Logistique</a></li>
+                                <li><a href="#">Equipier Polyvalent</a></li>
+                            </ul>
+                            </li>
+                            <li>
+                                <label for="btn-4" class="burger">Bac Pro</label>
+                                <a href="#">Bac Pro</a>
+                                <input type="checkbox" id="btn-4">
+                                <ul>
+                                    <li><a href="#">Commerce</a></li>
+                                    <li><a href="#">Vente</a></li>
+                                    <li><a href="#">Logistique</a></li>
+                                    <li><a href="#">Assitance  à la gestion</a></li>
+                                    <li><a href="#">Métier d'acceuil</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">U.L.I.S</a>
+                            <li><a href="#">Section Euro</a>
+                            <li><a href="#">UP2A</a>
+                            <li><a href="#">UF2S</a>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-5" class="burger">VIE AU LYCÉE</label>
+                        <a href="#">VIE AU LYCÉE </a>
+                        <input type="checkbox" id="btn-5">
+                        <ul>
+                            <li><a href="#">C.D.I</a></li>
+                            <li><a href="#">Internat</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="btn-6" class="burger">APPRENTISSAGE</label>
+                        <a href="#">APPRENTISSAGE</a>
+                        <input type="checkbox" id="btn-6">
+                        <ul>
+                            <li><a href="#">Apprentis</a></li>
+                            <li><a href="#">Formation Continue</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#" class="contact"><i class="fa-solid fa-envelope"></i> Contact</a>
+                    </li>
+                    <li>
+                        <a href="#" class="login"><i class="fa-solid fa-user"></i> Connecter</a>
+                    </li>
+                    
+                </ul>
+            
+        </nav>
+        <!-- End Navbar -->
 
     <!-- Start Header -->
     <header>
 
-        <!-- Start Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
-            <div class="container-fluid">
-                <img src="./public/img/logo-viviani.png" class="logo" alt="logo">
-                <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="toggler-icon top-bar"></span>
-                    <span class="toggler-icon middle-bar"></span>
-                    <span class="toggler-icon bottom-bar"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto mb-2 mb-lg-0">
-                        <li class="nav-item mx-2">
-                            <a class="nav-link active" aria-current="page" href="#">HOME</a>
-                        </li>
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                LE LYCÉE
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Actualités</a></li>
-                                <li><a class="dropdown-item" href="#">A Propos</a></li>
-                                <li><a class="dropdown-item" href="galery.html">Gallerie</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                FORMATIONS
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Formation 1</a></li>
-                                <li><a class="dropdown-item" href="#">Formation 2</a></li>
-                                <li><a class="dropdown-item" href="#">Formation 3</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                VIE AU LYCÉE
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">C.D.I</a></li>
-                                <li><a class="dropdown-item" href="#">Internat</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown mx-2">
-                            <a class="nav-link active" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                APPRENTISSAGE
-                            </a>
-                            <ul class="dropdown-menu">
-                                <li><a class="dropdown-item" href="#">Action</a></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button class="btn btn-outline-light mx-2" type="submit">
-                            <i class="fa-solid fa-envelope"></i> <span>Contact</span>
-                        </button>
-                        <button class="btn btn-outline-light mx-2" type="submit">
-                            <i class="fa-solid fa-user"></i> <span>Compte</span>
-                        </button>
-                    </div>
-
-
-                </div>
-            </div>
-        </nav>
-        <!-- End Navbar -->
+        
 
 
         <!-- Start Image Header -->
@@ -115,13 +124,22 @@
         <!-- End Image Header -->
         
         <div class="container-fluid  contact__content">
-            <div class="row justify-content-between p-3">
-                <div class="col-md-6 contact__title">
-                    <h1 class="">Comment Pouvons Nous Vous Aidez ?</h1>
-                    <p>Ensemble, explorons les moyens de vous accompagner vers la réussite : bienvenue au lycée !</p>    
-                    <!-- <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, cumque!</p> 
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, cumque!</p>  -->
+            <div class="row justify-content-between  p-3">
+                <div class="col-md-6">
+                    <div class="contact__title">
+                        <h1>Comment Pouvons Nous Vous Aidez ?</h1>
+                        <p>Ensemble, explorons les moyens de vous accompagner vers la réussite : bienvenue au lycée !</p> 
+                        
+                    </div>
+                    <div class="row ">
+                        <h5 class="text-dark text-center text-uppercase">Consultation en Ligne</h5>
+                        <h3 class="text-light text-center"><span class="fa fa-phone text-warning"></span> &nbsp; 03 29 35 29 85</h3>
+                    </div>
+                    
+                    
+                    
                 </div>
+               
 
                 <!-- Start section right -->
                 <div class="col-sm-9 col-md-4">
@@ -153,15 +171,15 @@
                             <!-- End Email -->
 
                             <!-- Start Message -->
-                            <div class=" col-10 mb-4">
+                            <div class="col-10 mb-5">
                                 <label for="exampleFormControlTextarea1" class="form-label"></label>
-                                <textarea class="form-control text-center" id="exampleFormControlTextarea1" rows="8"
+                                <textarea class="form-control text-center" id="exampleFormControlTextarea1" rows="10"
                                     placeholder="Entrer votre message .."></textarea>
                             </div>
                             <!-- End Message -->
 
                             <!-- Start Submit -->
-                            <div class="d-flex justify-content-center mb-3">
+                            <div class="d-flex justify-content-center mb-3 pb-5">
                                 <a href="#" class="btn btn-warning col-10" type="submit">Envoyer</a>
                             </div>
                             <!-- End Submit -->
@@ -177,6 +195,18 @@
         </div>
     </header>
     <!-- End Header -->
+    
+    <!-- Start Section Map -->
+    <div class="map bg-primary">
+        <div class="container mapping" style="background: url('./public/img/map.webp'); height: 500px; width: 100%;">
+            <i class="fa fa-location-dot"></i>
+            <h2 class="text-center">Où nous trouver</h2>
+            
+            
+        </div>
+    </div>
+    <a href=""></a>
+    <!-- End Section Map -->
 
     <script src="./public/js/nav.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"></script>
