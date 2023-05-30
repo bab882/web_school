@@ -10,7 +10,7 @@
     <header class="header">
         
         <!-- Start Banner -->
-        <div class="banner" style="background-image: url(./public/img/viviani.png);">
+        <div class="banner" style="background-image: url('.{{ asset('assets/img/viviani.png')}}');">
             <div class="color-overlay d-flex justify-content-center align-items-center">
                 <div class="container">
                     <div class="row">
@@ -30,4 +30,114 @@
         <!-- End Banner -->
     </header>
     <!-- End Header -->
+
+    <!-- Start Services -->
+    <section class="container" id="service">
+        <h2 class=" d-flex justify-content-center">Nos Formations</h2>
+        <span class=" d-flex justify-content-center text-center">
+            Nous croyons en l'importance de préparer nos étudiants à intégrer le marché du travail avec 
+            des compétences concrètes. C'est pourquoi nous offrons des formations professionnelles dans 
+            divers secteurs, tels que le commerce, la logistique, la vente, 
+            et bien d'autres. Nos partenariats avec des entreprises locales permettent aux étudiants de 
+            bénéficier d'une expérience pratique et de stages enrichissants.
+        </span>
+
+            <div class="content__box">
+                <div class="cards">
+                    <i class="fa-solid fa-dolly"></i>
+                    <h3 class="test">Logistique</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <h3>Commerce</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <i class="fa-solid fa-hand-holding-dollar"></i>
+                    <h3>Vente</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <i class="fa-solid fa-user-gear"></i>
+                    <h3>Equipier Polyvalent</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <i class="fa-solid fa-computer"></i>
+                    <h3>Assistante de Gestion</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+
+                <div class="cards">
+                    <i class="fa-solid fa-person-walking-luggage"></i>
+                    <h3>Métier d'Acceuil</h3>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi tempora placeat 
+                        fugiat voluptatibus distinctio? 
+                    </p>
+                </div>
+            </div>
+    </section>
+    <!-- End Services -->
+
+    <!-- Start News -->
+    <section id="news" class="parallax" style="background: url('{{asset('assets/img/news.jpg')}}') center center; height: 100vh">
+        <h2 class="d-flex justify-content-center">Dernières Nouvelles et Événements</h2>
+        <div class="container d-flex justify-content-center">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{asset('assets/img/course.jpg')}}" class="img-fluid" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn__news">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{asset('assets/img/course-two.jpg')}}" class="img-fluid" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn__news">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <img src="{{asset('assets/img/course.jpg')}}" class="img-fluid" alt="...">
+                        <div class="card-body">
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn__news">Go somewhere</a>
+                        </div>
+                      </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End News -->
+
+    
 {% endblock %}

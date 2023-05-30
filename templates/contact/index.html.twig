@@ -23,7 +23,7 @@
 
 		<div class="container-fluid  contact__content">
 			<div class="row justify-content-between  p-3">
-				<div class="col-md-6">
+				<div class="col-sm-12 col-md-6">
 					<div class="contact__title">
 						<h1>Comment Pouvons Nous Vous Aidez ?</h1>
 						<p>Ensemble, explorons les moyens de vous accompagner vers la réussite : bienvenue au lycée !</p>
@@ -95,21 +95,57 @@
 	<h2 class="text-center">Où nous trouver</h2>
 	<div class="row">
 
-		<div class="col-12 mapping">
-			<img src="{{ asset('assets/img/map.webp')}}" alt="">
+		<div class="col-sm-12 col-md-12 mapping">
+			<img src="{{ asset('assets/img/map.webp')}}" class="img-fluid" alt="">
 			<a href="https://www.google.fr/maps/place/Lyc%C3%A9e+Isabelle+Viviani/@48.1629309,6.4470714,17z/data=!3m1!4b1!4m6!3m5!1s0x4793a0972c474f61:0xf7bc5d0555fb6314!8m2!3d48.1629274!4d6.4496463!16s%2Fg%2F1tj20glc">
-				<i class="fa fa-location-dot"></a>
+				<i class="fa fa-location-dot loc"></a>
 			</i>
 		</div>
 
 
 	</div>
+	
 	<div class="d-flex flex-row-reverse">
-		<div class="col-2">
-        Ouvert
-        <div class="planning">
-        
-        </div>
+		<div class="col-3 text-left p-4" id="planning">
+		<!-- Start Tab Time -->
+        <table class="planning ">
+			<thead class="planning-title p-2">
+				<tr>
+					<th scope="col">Horaires d'ouverture</th>
+				</tr>
+			</thead>
+			<tbody class="planning-content">
+				<tr>
+					<td class="d-inline-flex">Lundi</td>
+					<td class="d-inline-flex">07:30–18:00</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Mardi</td>
+					<td class="d-inline-flex">07:30–18:00</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Mercredi</td>
+					<td class="d-inline-flex">07:30–12:00</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Jeudi</td>
+					<td class="d-inline-flex">07:30–18:00</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Vendredi</td>
+					<td class="d-inline-flex">07:30–18:00</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Samedi</td>
+					<td class="d-inline-flex">Fermé</td>
+				</tr>
+				<tr>
+					<td class="d-inline-flex">Dimanche</td>
+					<td class="d-inline-flex">Fermé</td>
+				</tr>
+			</tbody> 
+        </table>
+		<!-- End Tab Time -->
         </div>
 		<div class="col-2">address</div>
 		

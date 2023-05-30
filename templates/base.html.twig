@@ -17,8 +17,9 @@
 		{# Run `composer require symfony/webpack-encore-bundle` to start using Symfony UX #}
 
 		{# ====== Feuilles de styles ====== #}
-		<link rel="stylesheet" href=" {{ asset('assets/css/bootstrap.min.css') }} "> {% block stylesheets %}
-			<link rel="stylesheet" href=" {{ asset('assets/css/style.css') }} ">
+		<link rel="stylesheet" href=" {{ asset('assets/css/bootstrap.min.css')}}"> 
+		{% block stylesheets %}
+			<link rel="stylesheet" href=" {{ asset('assets/css/style.css') }}">
 		{% endblock %}
 
 
@@ -30,14 +31,14 @@
 
 		{% block body %}{% endblock %}
 
-		{# ===== J'inclu ma Footer ===== #}
-		{% include "_partials/footer.html.twig" %}
+		{# ===== J'inclu le Footer ===== #}
+		<!-- {% include "_partials/footer.html.twig" %} -->
 
 
 		{# ====== Fichier JS ====== #}
-		{% block javascripts %}
+		{% block javascripts %}<script src=" {{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 		<script src=" {{ asset('assets/js/main.js') }} ">
-			<script src=" {{ asset('assets/js/bootstrap.bundle.min.js') }} ">
+		
 				{% endblock %}
-				    </body> 
-				</html>
+	</body> 
+</html>
