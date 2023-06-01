@@ -19,7 +19,8 @@ use EasyCorp\Bundle\EasyAdminBundle\Controller\AbstractCrudController;
 use EasyCorp\Bundle\EasyAdminBundle\Router\AdminUrlGenerator;
 
 class ServicesCrudController extends AbstractCrudController
-{public const ACTION_DUPLICATE = 'duplicate';
+{
+    public const ACTION_DUPLICATE = 'duplicate';
     public const SERVICES_BASE_PATH = 'assets/img/services';
     public const SERVICES_UPLOAD_DIR = 'public/assets/img/services';
     
@@ -44,14 +45,14 @@ class ServicesCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
-            TextField::new('name'),
-            TextField::new('title'),
-            TextField::new('slug'),
-            ImageField::new('img')
+            TextField::new('name', 'Nom'),
+            TextField::new('title', 'Titre'),
+            TextField::new('slug', 'Url'),
+            ImageField::new('img', 'Images')
                 ->setBasePath(self::SERVICES_BASE_PATH)
                 ->setUploadDir(self::SERVICES_UPLOAD_DIR)
                 ->setSortable(false),
-            TextEditorField::new('description'),
+            TextEditorField::new('description', 'Texte'),
             DateTimeField::new('created_at')->hideOnForm(),
             DateTimeField::new('updated_at')->hideOnForm(),
             DateTimeField::new('published_at')->hideOnForm(),
@@ -63,27 +64,11 @@ class ServicesCrudController extends AbstractCrudController
         if(!$entityInstance instanceof Services) return;
 
         $entityInstance->setCreatedAt(new \DateTimeImmutable());
+        $entityInstance->setUpdatedAt(new \DateTimeImmutable());
+        $entityInstance->setPublishedAt(new \DateTimeImmutable());
 
         // Pour flusher
         parent::persistEntity($em, $entityInstance);
-    }
-
-    public function updatedAt(EntityManagerInterface $em, $entityInstance)
-    {
-        if(!$entityInstance instanceof Services) return;
-        
-        $entityInstance->setUpdatedAt(new \DateTimeImmutable());
-        // Pour flusher
-        parent::updatedAt($em, $entityInstance);
-    }
-
-    public function publishedAt(EntityManagerInterface $em, $entityInstance)
-    {
-        if(!$entityInstance instanceof Services) return;
-        
-        $entityInstance->setPublishedAt(new \DateTimeImmutable());
-        // Pour flusher
-        parent::publishedAt($em, $entityInstance);
     }
 
     public function duplicateServices(AdminContext $context, AdminUrlGenerator $adminUrlGenerator, EntityManagerInterface $em) :Response

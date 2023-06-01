@@ -28,6 +28,9 @@ class Gallery
     #[ORM\Column]
     private ?\DateTimeImmutable $published_at = null;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Img = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -89,6 +92,18 @@ class Gallery
     public function setPublishedAt(\DateTimeImmutable $published_at): self
     {
         $this->published_at = $published_at;
+
+        return $this;
+    }
+
+    public function getImg(): ?string
+    {
+        return $this->Img;
+    }
+
+    public function setImg(string $Img): self
+    {
+        $this->Img = $Img;
 
         return $this;
     }

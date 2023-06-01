@@ -21,7 +21,7 @@ class CategoryCrudController extends AbstractCrudController
     {
         return [
             IdField::new('id')->hideOnForm(),
-            TextField::new('name'),
+            TextField::new('name', 'Nom'),
             DateTimeField::new('created_at')->hideOnForm(),
             DateTimeField::new('updated_at')->hideOnForm(),
             DateTimeField::new('published_at')->hideOnForm(),
@@ -33,25 +33,13 @@ class CategoryCrudController extends AbstractCrudController
         if(!$entityInstance instanceof Category) return;
 
         $entityInstance->setCreatedAt(new \DateTimeImmutable());
+        $entityInstance->setUpdatedAt(new \DateTimeImmutable());
+        $entityInstance->setPublishedAt(new \DateTimeImmutable());
+
         // Pour flusher
         parent::persistEntity($em, $entityInstance);
         // $em->persist($entityInstance);
         // $em->flush();
-    }
-    public function updatedAt(EntityManagerInterface $em, $entityInstance) :void
-    {
-        if(!$entityInstance instanceof Category) return;
-        $entityInstance->setUpdatedAt(new \DateTimeImmutable());
-
-        parent::updatedAt($em, $entityInstance);
-    }
-    public function publishedAt(EntityManagerInterface $em, $entityInstance) :void
-    {
-        if(!$entityInstance instanceof Category) return;
-
-        $entityInstance->setPublishedAt(new \DateTimeImmutable());
-
-        parent::publishedAt($em, $entityInstance);
     }
     public function deleteEntity(EntityManagerInterface $em, $entityInstance): void
     {

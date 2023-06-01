@@ -5,6 +5,7 @@ namespace App\Controller\Admin;
 use App\Entity\Articles;
 use App\Entity\Blog;
 use App\Entity\Category;
+use App\Entity\Diplome;
 use App\Entity\Gallery;
 use App\Entity\Services;
 use App\Entity\User;
@@ -36,12 +37,17 @@ class DashboardController extends AbstractDashboardController
     public function configureDashboard(): Dashboard
     {
         return Dashboard::new()
-            ->setTitle('Web_school');
+            ->setTitle('Viviani - Administration')
+            ->renderContentMaximized();
     }
 
     public function configureMenuItems(): iterable
     {
-        yield MenuItem::subMenu('Actualités', 'fas fa-newspaper text-primary');
+        
+
+        
+
+        yield MenuItem::section('Actualités', 'fas fa-newspaper text-primary');
         yield MenuItem::subMenu('Articles', 'fas fa-bars' )->setSubItems([
             MenuItem::linkToCrud('Liste', 'fas fa-eye', Articles::class),
             MenuItem::linkToCrud('Créer', 'fas fa-plus', Articles::class)->setAction(Crud::PAGE_NEW)   
@@ -56,7 +62,7 @@ class DashboardController extends AbstractDashboardController
             
         ]);
 
-        yield MenuItem::subMenu('Formations', 'fas fa-graduation-cap text-primary')->setSubItems([
+        yield MenuItem::subMenu('Formations', 'fas fa-book text-primary')->setSubItems([
             MenuItem::linkToCrud('Liste', 'fas fa-eye', Services::class),
             MenuItem::linkToCrud('Créer', 'fas fa-plus', Services::class)->setAction(Crud::PAGE_NEW)  
         ]);
@@ -67,6 +73,10 @@ class DashboardController extends AbstractDashboardController
         yield MenuItem::subMenu('Utilisateurs', 'fas fa-user text-primary')->setSubItems([
             MenuItem::linkToCrud('Liste', 'fas fa-eye', User::class),
             MenuItem::linkToCrud('Créer', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW)   
+        ]);
+        yield MenuItem::subMenu('Diplomes', 'fas fa-graduation-cap text-primary')->setSubItems([
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', Diplome::class),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Diplome::class)->setAction(Crud::PAGE_NEW)   
         ]);
         
         
