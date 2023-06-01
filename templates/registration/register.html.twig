@@ -1,0 +1,57 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Inscription{% endblock %}
+
+{% block body %}
+<section class="container-fluid auth">
+    <div class="input col-md-3 right">
+        <h3 class="title">Inscription <br>
+            <span class="sous-title mb-2">Pour avoir un espace Admin</span>
+        </h3>
+        
+
+        {{ form_start(registrationForm) }}
+        
+
+        <div class="row g-3">
+            <div class="col-6 mb-2">
+                {{ form_row(registrationForm.lastname) }}
+            </div>
+            <div class="col-6 mb-2">
+                {{ form_row(registrationForm.firstname) }}
+            </div>
+        </div>
+        <div class="col-12 mb-2">
+            {{ form_row(registrationForm.email) }}
+        </div>
+        
+        <div class="col-12 mb-2">
+            {{ form_row(registrationForm.plainPassword, {
+                label: 'Password'
+            }) }}
+        </div>
+        
+        <div class="row g-2 p-4">
+            <button type="submit" class="btn col-md-5 m-2">S'inscrire</button>
+            {{ form_end(registrationForm) }}
+            <button type="submit" id="btn" class="btn col-md-5 m-2">
+                <a href="login.html">Retour</a>
+            </button>
+        </div>
+        
+      
+     
+    
+        
+    
+        
+        
+
+        
+    </div>
+    
+</section>
+    
+
+    
+{% endblock %}

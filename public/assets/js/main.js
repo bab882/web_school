@@ -35,6 +35,9 @@ function activateIcon(id) {
     var icon = document.getElementById("icon" + id.substring(4));
     icon.classList.add("active");
   }
+//  End Curseur de la souris
+
+// Auto
 
 
 

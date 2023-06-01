@@ -1,107 +1,43 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Actualités{% endblock %}
+{% block title %}Hello AboutController!{% endblock %}
 
 {% block body %}
-
-<!-- Start Content -->
-    <section id="blog" class="container">
-        <div class="text-start my-5">
-            <p class="subtitle-blog">Lycée Professionel Viviani</p>
-            <h1 class="title">Actualités</h1>
-            
-            
-            <!-- Start Row -->
-            <div class="row">
-                <!-- Start Card -->
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ ('assets/img/actuality.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
+<section id="container__about">
+    <div class="blockY">
+        <div class="slide one">
+            <div class="container" id="text__modify">
+                <div class="d-flex flex-row-column">
+                    <div class="col-12">
+                        <h4 class="text-center">A Propos</h4>
+                        <p class="text-center"> 
+                            Isabelle Viviani fonda notre établissement en 1918 pour éduquer les enfants orphelins de la Première Guerre Mondiale. 
+                            Son école de préapprentissage à Epinal, motivée par la perte de son fils en Lorraine en 1914, offrit éducation et formation. 
+                            L'école fut d'abord située rue Gambetta, puis transférée en 1967 rue de Remiremont, devenant le Lycée Professionnel Isabelle Viviani.
+                        </p> 
+                    </div>                 
                 </div>
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ asset('assets/img/formations.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ asset('assets/img/course.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p class="pouet">Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ asset('assets/img/course-two.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ asset('assets/img/news.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="col-lg-4 col-md-6 col-sm-12">
-                    <div class="card  blog-content mb-5">
-                        <img src="{{ asset('assets/img/actuality.jpg') }}" alt="" class="img-fluid blog-img">
-                        <div class="card-body ">
-                            <div class="card-text text-start">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Consequatur enim commodi eligendi quam minima labore...
-                                </p>
-                            </div>
-                            <a class="btn-blog float-start" href="#">Lire la suite ..</a>
-                        </div>
-                    </div>
-                </div>
-                <!-- End Card -->
             </div>
-            <!-- End Row -->
         </div>
-    </section>
-    <!-- End Content -->
-
+        <div class="slide two">
+            <div class="container" id="text__modify">
+                <div class="d-flex flex-row-column">
+                    <div class="col-12">
+                        <h4 class="text-center">Cursus</h4>
+                        <div class="col-6"></div>
+                        <p class="text-center"> 
+                            Au sein du lycée Viviani, nous accompagnons chaque élève dans son parcours de professionnalisation, 
+                            en créant une harmonie entre excellence académique et épanouissement personnel. En plus de nos enseignements 
+                            spécialisés, nous encourageons nos élèves à s'impliquer dans des projets artistiques, culturels et citoyens, 
+                            favorisant ainsi leur développement global. Forts de notre engagement dans l'innovation, l'ouverture internationale 
+                            et l'inclusion scolaire, nous créons un environnement propice à la réussite de tous nos étudiants.
+                        </p> 
+                    </div>                 
+                </div>
+            </div>
+        </div>
+        <div class="slide three">slide 3</div>
+        <div class="slide four">slide 4</div>
+    </div>
+</section>
 {% endblock %}

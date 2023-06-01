@@ -2,12 +2,14 @@
 
 namespace App\Entity;
 
-use App\Repository\ServicesRepository;
+use App\Repository\DiplomeRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ServicesRepository::class)]
-class Services
+#[ORM\Entity(repositoryClass: DiplomeRepository::class)]
+class Diplome
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,12 +21,6 @@ class Services
 
     #[ORM\Column(length: 255)]
     private ?string $title = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $slug = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $img = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -38,8 +34,13 @@ class Services
     #[ORM\Column]
     private ?\DateTimeImmutable $published_at = null;
 
-    #[ORM\ManyToOne(inversedBy: 'relation')]
-    private ?Diplome $diplome = null;
+    #[ORM\OneToMany(mappedBy: 'diplome', targetEntity: Services::class)]
+    private Collection $relation;
+
+    public function __construct()
+    {
+        $this->relation = new ArrayCollection();
+    }
 
     public function getId(): ?int
     {
@@ -66,30 +67,6 @@ class Services
     public function setTitle(string $title): self
     {
         $this->title = $title;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    public function getImg(): ?string
-    {
-        return $this->img;
-    }
-
-    public function setImg(string $img): self
-    {
-        $this->img = $img;
 
         return $this;
     }
@@ -142,14 +119,32 @@ class Services
         return $this;
     }
 
-    public function getDiplome(): ?Diplome
+    /**
+     * @return Collection<int, Services>
+     */
+    public function getRelation(): Collection
     {
-        return $this->diplome;
+        return $this->relation;
     }
 
-    public function setDiplome(?Diplome $diplome): self
+    public function addRelation(Services $relation): self
     {
-        $this->diplome = $diplome;
+        if (!$this->relation->contains($relation)) {
+            $this->relation->add($relation);
+            $relation->setDiplome($this);
+        }
+
+        return $this;
+    }
+
+    public function removeRelation(Services $relation): self
+    {
+        if ($this->relation->removeElement($relation)) {
+            // set the owning side to null (unless already changed)
+            if ($relation->getDiplome() === $this) {
+                $relation->setDiplome(null);
+            }
+        }
 
         return $this;
     }

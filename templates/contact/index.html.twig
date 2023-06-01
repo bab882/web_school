@@ -22,15 +22,15 @@
 		<!-- End Image Header -->
 
 		<div class="container-fluid  contact__content">
-			<div class="row justify-content-between  p-3">
-				<div class="col-sm-12 col-md-6">
+			<div class="row p-3">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<div class="contact__title">
 						<h1>Comment Pouvons Nous Vous Aidez ?</h1>
 						<p>Ensemble, explorons les moyens de vous accompagner vers la réussite : bienvenue au lycée !</p>
 
 					</div>
-					<div class="row ">
-						<h5 class="text-dark text-center text-uppercase">Consultation en Ligne</h5>
+					<div class="row contact__number">
+						<h5 class="text-light text-center text-uppercase">Consultation en Ligne</h5>
 						<h3 class="text-light text-center">
 							<span class="fa fa-phone text-warning"></span>
 							&nbsp; 03 29 35 29 85</h3>
@@ -41,10 +41,11 @@
 
 
 				<!-- Start section right -->
-				<div class="col-sm-9 col-md-4">
+				<div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
 					<form class="contact__card ">
-						<div class="row d-flex justify-content-center">
-							<h3 class="py-4 text-dark text-center">Parler nous de vous</h3>
+						<!-- Verfifier le row et la  flex -->
+						<div class="row d-flex justify-content-center"> 
+							<h3 class=" pt-md-5 text-dark text-center">Parler nous de vous</h3>
 							<!-- Start Lastname -->
 							<div class="col-5  mb-0">
 								<label for="contact@gmail.com" class="form-label"></label>
@@ -91,65 +92,85 @@
 <!-- End Header -->
 
 <!-- Start Section Map -->
-<section class="container map bg-primary">
+<section class="container map">
 	<h2 class="text-center">Où nous trouver</h2>
 	<div class="row">
 
 		<div class="col-sm-12 col-md-12 mapping">
-			<img src="{{ asset('assets/img/map.webp')}}" class="img-fluid" alt="">
-			<a href="https://www.google.fr/maps/place/Lyc%C3%A9e+Isabelle+Viviani/@48.1629309,6.4470714,17z/data=!3m1!4b1!4m6!3m5!1s0x4793a0972c474f61:0xf7bc5d0555fb6314!8m2!3d48.1629274!4d6.4496463!16s%2Fg%2F1tj20glc">
-				<i class="fa fa-location-dot loc"></a>
-			</i>
+			<img src="{{ asset('assets/img/map.webp')}}" class="img-fluid" alt="carte du monde en 2D">
 		</div>
-
-
 	</div>
-	
-	<div class="d-flex flex-row-reverse">
-		<div class="col-3 text-left p-4" id="planning">
-		<!-- Start Tab Time -->
-        <table class="planning ">
-			<thead class="planning-title p-2">
-				<tr>
-					<th scope="col">Horaires d'ouverture</th>
-				</tr>
-			</thead>
-			<tbody class="planning-content">
-				<tr>
-					<td class="d-inline-flex">Lundi</td>
-					<td class="d-inline-flex">07:30–18:00</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Mardi</td>
-					<td class="d-inline-flex">07:30–18:00</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Mercredi</td>
-					<td class="d-inline-flex">07:30–12:00</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Jeudi</td>
-					<td class="d-inline-flex">07:30–18:00</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Vendredi</td>
-					<td class="d-inline-flex">07:30–18:00</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Samedi</td>
-					<td class="d-inline-flex">Fermé</td>
-				</tr>
-				<tr>
-					<td class="d-inline-flex">Dimanche</td>
-					<td class="d-inline-flex">Fermé</td>
-				</tr>
-			</tbody> 
-        </table>
-		<!-- End Tab Time -->
-        </div>
-		<div class="col-2">address</div>
+</section>	
+
+	<section class="container" id="section__address" >
+		<div class="d-md-flex flex-row-reverse py-3" id="content__contact">
+			<div class="col-xs-12 col-sm-5 col-md-4  mb-sm-0">
+				<div class="card card__contact my-4 ">
+					<div class="card-body">
+						<h5 class="card-title text-center pb-2">Ouvert</h5>
+						<div class="d-flex justify-content-center">
+							<div class="col-4">
+								<ol class="card-text">
+									<li class="address_item my-2">Lun</li>
+									<li class="address_item my-2">Mar</li>
+									<li class="address_item my-2">Mer</li>
+									<li class="address_item my-2">Jeu</li>
+									<li class="address_item my-2">Ven</li>
+									<li class="address_item my-2">Sam</li>
+									<li class="address_item my-2">Dim</li>
+								</ol>
+							</div>
+							<div class="col-8">
+								<ol class="card-text">
+									<li class="address_item my-2">07:30–18:00</li>
+									<li class="address_item my-2">07:30–18:00</li>
+									<li class="address_item my-2">07:30–12:00</li>
+									<li class="address_item my-2">07:30–18:00</li>
+									<li class="address_item my-2">07:30–18:00</li>
+									<li class="address_item my-2">Fermé</li>
+									<li class="address_item my-2">Fermé</li>
+								</ol>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<div class="col-xs-12 col-sm-5 col-md-4 mb-3 mb-sm-0 ">
+				<div class="card card__contact my-4 ">
+					<div class="card-body">
+						<div class="row">
+							<div class="col-2">
+								<ol class="card-text my-2">
+									<li class="address_item mb-5"><h5><img src="{{ asset('assets/img/flaticon/france.png')}}" alt="localisation de pays"></h5></li>
+									<li class="address_item my-5"><i class="fa-solid fa-location-dot"></i></li>
+									<li class="address_item my-5"><i class="fa-solid fa-phone"></i></li>
+								</ol>
+							</div>
+							<div class="col-10">
+								<ol class="card-text my-2">
+									<li class="address_item mb-5"><h5>Épinal</h5></li>
+									<li class="address_item my-5">75 Rue de Remiremont</li>
+									<li class="address_item my-5">03 29 35 29 85</li>
+								</ol>
+							</div>
+							<div class="d-flex justify-content-center pb-2">
+								<a href="https://www.google.fr/maps/place/Lyc%C3%A9e+Isabelle+Viviani/@48.1629309,6.4470714,17z/data=!3m1!4b1!4m6!3m5!1s0x4793a0972c474f61:0xf7bc5d0555fb6314!8m2!3d48.1629274!4d6.4496463!16s%2Fg%2F1tj20glc?entry=ttu" class=" btn__address ">Ouvrir Google Maps</a>
+							</div>
+							
+						</div>
+						
+					</div>
+				</div>
+			</div>
+			
+		  
 		
 	</div>
+	</section>
+	
+        
+	
 
 
-</section>{% endblock %}
+{% endblock %}

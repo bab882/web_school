@@ -1,37 +1,87 @@
-{% extends 'base.html.twig' %}
-
+{% extends 'base.html.twig' %} 
 {% block title %}Hello LibraryController!{% endblock %}
-
 {% block body %}
 <section class="home__life" id="home__life">
-    <div class="container">
-        <div class="left">
-            <img src="{{ asset('assets/img/library.jpg')}}" alt="C.D.I">
+  <div class="container">
+    <div class="row block__reverse">
+      <div class="col-md-12 col-lg-6">
+        <div class="section__left">
+          <picture id="picture" class="px-5">
+            <img
+              src="{{ asset('assets/img/library.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+          </picture>
         </div>
-        <div class="rigth">
-            <h1>Centre de Documentation <br> et D'information</h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore quisquam laboriosam molestias debitis, praesentium sunt error ut omnis nihil quo.</p>
-            <div class="advantages">
-                <figure>
-                    <img src="{{ asset('assets/img/flaticon/reading.png')}}" alt="logo lecture">
-                    lecture
-                </figure>
-
-                <figure>
-                    <img src="{{ asset('assets/img/flaticon/reading.png')}}" alt="logo lecture">
-                    Espace
-                </figure>
-
-                <figure>
-                    <img src="{{ asset('assets/img/flaticon/reading.png')}}" alt="logo lecture">
-                    Information
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dicta, ea.</p>
-                </figure>
+      </div>
+      <div class="col-md-12 col-lg-6">
+        <div class="section__right">
+          <h1>Le C.D.I</h1>
+          <span>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam
+            tempora ratione magnam necessitatibus porro, ut nemo? Sit
+            praesentium quasi qui!
+          </span>
+          <div class="content__right">
+            <div class="d-inline-flex justify-content-center align-items-baseline">
+              <div class="col-3">
+                <ol class="body__logo">
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/reading.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/work-space.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/reading.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                </ol>
+              </div>
+              <div class="col-9">
+                <ol class="body__content">
+                  <li>
+                    <h5>Lecture</h5>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Cum aspernatur inventore delectus quidem architecto id
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Espace</h5>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Cum aspernatur inventore delectus quidem architecto id
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Information</h5>
+                    <p>
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                      Cum aspernatur inventore delectus quidem architecto id
+                    </p>
+                  </li>
+                </ol>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </div>
+  </div>
 </section>
-
 
 <!-- <section id="library">
     <div class="container">
@@ -75,10 +125,4 @@
     
 </section>   -->
 
-    
-
-           
-              
-            
-    
 {% endblock %}

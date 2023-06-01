@@ -2,13 +2,15 @@
 
 namespace App\Entity;
 
-use App\Repository\UsersRepository;
+use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\PasswordAuthenticatedUserInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 
-#[ORM\Entity(repositoryClass: UsersRepository::class)]
-class Users implements UserInterface, PasswordAuthenticatedUserInterface
+#[ORM\Entity(repositoryClass: UserRepository::class)]
+#[UniqueEntity(fields: ['email'], message: 'There is already an account with this email')]
+class User implements UserInterface, PasswordAuthenticatedUserInterface
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -19,7 +21,7 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     private ?string $email = null;
 
     #[ORM\Column]
-    private array $roles = [];
+    private array $roles = ['ROLE_USER'];
 
     /**
      * @var string The hashed password
@@ -27,27 +29,26 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
     #[ORM\Column]
     private ?string $password = null;
 
-    #[ORM\Column(length: 100)]
-    private ?string $first_name = null;
+    #[ORM\Column(type: 'boolean')]
+    private $isVerified = false;
 
     #[ORM\Column(length: 100)]
-    private ?string $last_name = null;
+    private ?string $firstname = null;
+
+    #[ORM\Column(length: 100)]
+    private ?string $lastname = null;
 
     #[ORM\Column]
-    private array $role = [];
+    private ?\DateTimeImmutable $createdAt = null;
 
     #[ORM\Column]
-    private ?\DateTimeImmutable $created_at = null;
+    private ?\DateTimeImmutable $updatedAt = null;
 
-    #[ORM\Column]
-    private ?\DateTimeImmutable $updated_at = null;
-
-    #[ORM\Column]
-    private ?\DateTimeImmutable $published_at = null;
-
-    #[ORM\Column]
-    private ?bool $is_valid = null;
-
+    public function __construct()
+    {
+        $this->createdAt = new \DateTimeImmutable();
+        $this->updatedAt = new \DateTimeImmutable();
+    }
     public function getId(): ?int
     {
         return $this->id;
@@ -118,86 +119,62 @@ class Users implements UserInterface, PasswordAuthenticatedUserInterface
         // $this->plainPassword = null;
     }
 
-    public function getFirstName(): ?string
+    public function isVerified(): bool
     {
-        return $this->first_name;
+        return $this->isVerified;
     }
 
-    public function setFirstName(string $first_name): self
+    public function setIsVerified(bool $isVerified): self
     {
-        $this->first_name = $first_name;
+        $this->isVerified = $isVerified;
 
         return $this;
     }
 
-    public function getLastName(): ?string
+    public function getFirstname(): ?string
     {
-        return $this->last_name;
+        return $this->firstname;
     }
 
-    public function setLastName(string $last_name): self
+    public function setFirstname(string $firstname): self
     {
-        $this->last_name = $last_name;
+        $this->firstname = $firstname;
 
         return $this;
     }
 
-    public function getRole(): array
+    public function getLastname(): ?string
     {
-        return $this->role;
+        return $this->lastname;
     }
 
-    public function setRole(array $role): self
+    public function setLastname(string $lastname): self
     {
-        $this->role = $role;
+        $this->lastname = $lastname;
 
         return $this;
     }
 
     public function getCreatedAt(): ?\DateTimeImmutable
     {
-        return $this->created_at;
+        return $this->createdAt;
     }
 
-    public function setCreatedAt(\DateTimeImmutable $created_at): self
+    public function setCreatedAt(\DateTimeImmutable $createdAt): self
     {
-        $this->created_at = $created_at;
+        $this->createdAt = $createdAt;
 
         return $this;
     }
 
     public function getUpdatedAt(): ?\DateTimeImmutable
     {
-        return $this->updated_at;
+        return $this->updatedAt;
     }
 
-    public function setUpdatedAt(\DateTimeImmutable $updated_at): self
+    public function setUpdatedAt(\DateTimeImmutable $updatedAt): self
     {
-        $this->updated_at = $updated_at;
-
-        return $this;
-    }
-
-    public function getPublishedAt(): ?\DateTimeImmutable
-    {
-        return $this->published_at;
-    }
-
-    public function setPublishedAt(\DateTimeImmutable $published_at): self
-    {
-        $this->published_at = $published_at;
-
-        return $this;
-    }
-
-    public function isIsValid(): ?bool
-    {
-        return $this->is_valid;
-    }
-
-    public function setIsValid(bool $is_valid): self
-    {
-        $this->is_valid = $is_valid;
+        $this->updatedAt = $updatedAt;
 
         return $this;
     }

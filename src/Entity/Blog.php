@@ -2,12 +2,12 @@
 
 namespace App\Entity;
 
-use App\Repository\ServicesRepository;
+use App\Repository\BlogRepository;
 use Doctrine\DBAL\Types\Types;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ServicesRepository::class)]
-class Services
+#[ORM\Entity(repositoryClass: BlogRepository::class)]
+class Blog
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -15,16 +15,10 @@ class Services
     private ?int $id = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $name = null;
-
-    #[ORM\Column(length: 255)]
     private ?string $title = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $slug = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $img = null;
+    private ?string $small_description = null;
 
     #[ORM\Column(type: Types::TEXT)]
     private ?string $description = null;
@@ -39,23 +33,11 @@ class Services
     private ?\DateTimeImmutable $published_at = null;
 
     #[ORM\ManyToOne(inversedBy: 'relation')]
-    private ?Diplome $diplome = null;
+    private ?Articles $articles = null;
 
     public function getId(): ?int
     {
         return $this->id;
-    }
-
-    public function getName(): ?string
-    {
-        return $this->name;
-    }
-
-    public function setName(string $name): self
-    {
-        $this->name = $name;
-
-        return $this;
     }
 
     public function getTitle(): ?string
@@ -70,26 +52,14 @@ class Services
         return $this;
     }
 
-    public function getSlug(): ?string
+    public function getSmallDescription(): ?string
     {
-        return $this->slug;
+        return $this->small_description;
     }
 
-    public function setSlug(string $slug): self
+    public function setSmallDescription(string $small_description): self
     {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    public function getImg(): ?string
-    {
-        return $this->img;
-    }
-
-    public function setImg(string $img): self
-    {
-        $this->img = $img;
+        $this->small_description = $small_description;
 
         return $this;
     }
@@ -142,14 +112,14 @@ class Services
         return $this;
     }
 
-    public function getDiplome(): ?Diplome
+    public function getArticles(): ?Articles
     {
-        return $this->diplome;
+        return $this->articles;
     }
 
-    public function setDiplome(?Diplome $diplome): self
+    public function setArticles(?Articles $articles): self
     {
-        $this->diplome = $diplome;
+        $this->articles = $articles;
 
         return $this;
     }

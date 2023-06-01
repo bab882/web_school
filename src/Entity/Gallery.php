@@ -2,12 +2,11 @@
 
 namespace App\Entity;
 
-use App\Repository\ServicesRepository;
-use Doctrine\DBAL\Types\Types;
+use App\Repository\GalleryRepository;
 use Doctrine\ORM\Mapping as ORM;
 
-#[ORM\Entity(repositoryClass: ServicesRepository::class)]
-class Services
+#[ORM\Entity(repositoryClass: GalleryRepository::class)]
+class Gallery
 {
     #[ORM\Id]
     #[ORM\GeneratedValue]
@@ -18,16 +17,7 @@ class Services
     private ?string $name = null;
 
     #[ORM\Column(length: 255)]
-    private ?string $title = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $slug = null;
-
-    #[ORM\Column(length: 255)]
-    private ?string $img = null;
-
-    #[ORM\Column(type: Types::TEXT)]
-    private ?string $description = null;
+    private ?string $alt = null;
 
     #[ORM\Column]
     private ?\DateTimeImmutable $created_at = null;
@@ -37,9 +27,6 @@ class Services
 
     #[ORM\Column]
     private ?\DateTimeImmutable $published_at = null;
-
-    #[ORM\ManyToOne(inversedBy: 'relation')]
-    private ?Diplome $diplome = null;
 
     public function getId(): ?int
     {
@@ -58,50 +45,14 @@ class Services
         return $this;
     }
 
-    public function getTitle(): ?string
+    public function getAlt(): ?string
     {
-        return $this->title;
+        return $this->alt;
     }
 
-    public function setTitle(string $title): self
+    public function setAlt(string $alt): self
     {
-        $this->title = $title;
-
-        return $this;
-    }
-
-    public function getSlug(): ?string
-    {
-        return $this->slug;
-    }
-
-    public function setSlug(string $slug): self
-    {
-        $this->slug = $slug;
-
-        return $this;
-    }
-
-    public function getImg(): ?string
-    {
-        return $this->img;
-    }
-
-    public function setImg(string $img): self
-    {
-        $this->img = $img;
-
-        return $this;
-    }
-
-    public function getDescription(): ?string
-    {
-        return $this->description;
-    }
-
-    public function setDescription(string $description): self
-    {
-        $this->description = $description;
+        $this->alt = $alt;
 
         return $this;
     }
@@ -138,18 +89,6 @@ class Services
     public function setPublishedAt(\DateTimeImmutable $published_at): self
     {
         $this->published_at = $published_at;
-
-        return $this;
-    }
-
-    public function getDiplome(): ?Diplome
-    {
-        return $this->diplome;
-    }
-
-    public function setDiplome(?Diplome $diplome): self
-    {
-        $this->diplome = $diplome;
 
         return $this;
     }
