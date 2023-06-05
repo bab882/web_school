@@ -26,8 +26,8 @@
 	</head>
 	<body>
 		<!-- {# ===== J'inclu ma Navbar ===== #} -->
-		{% include "_partials/navbar.html.twig" %}
-
+		<!-- {% include "_partials/navbar.html.twig" %} -->
+		{{ render(controller('App\\Controller\\MenuController::index')) }}
 
 		{% block body %}
 		
@@ -39,9 +39,8 @@
 
 		<!-- {# ====== Fichier JS ====== #} -->
 		{% block javascripts %}
-		<script src=" {{ asset('assets/js/main.js') }}">
-		<script src=" {{ asset('assets/js/bootstrap.bundle.min.js')}}">
-		
+		<script src=" {{ asset('assets/js/main.js') }}"></script>
+		<script src=" {{ asset('assets/js/bootstrap.bundle.min.js')}}"></script>
 		{% endblock %}
 	</body> 
 </html>

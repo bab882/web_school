@@ -36,6 +36,9 @@ class Category
     public function __construct()
     {
         $this->categories = new ArrayCollection();
+        $this->created_at = new \DateTimeImmutable();
+        $this->updated_at = new \DateTimeImmutable();
+        $this->published_at = new \DateTimeImmutable();
     }
 
     public function getId(): ?int

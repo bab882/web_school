@@ -43,10 +43,6 @@ class DashboardController extends AbstractDashboardController
 
     public function configureMenuItems(): iterable
     {
-        
-
-        
-
         yield MenuItem::section('Actualités', 'fas fa-newspaper text-primary');
         yield MenuItem::subMenu('Articles', 'fas fa-bars' )->setSubItems([
             MenuItem::linkToCrud('Liste', 'fas fa-eye', Articles::class),
