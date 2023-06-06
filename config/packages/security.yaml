@@ -11,10 +11,20 @@ security:
             custom_authenticator: App\Security\UserAuthenticator
             logout:
                 path: app_logout
+                target: app_login
+
+            login_throttling:
+                max_attempts: 3
+                interval: '60 minutes'
 
     access_control:
-        # - { path: ^/admin, roles: ROLE_ADMIN }
-        # - { path: ^/profile, roles: ROLE_EDITOR }
+        - { path: '^/admin', roles: ROLE_ADMIN, requires_channel: '%env(SECURE_SCHEME)%', methods: [GET, PUT, DELETE, POST] }
+        # Intercepter toutes les autres URL
+        - { path: '^/', roles: PUBLIC_ACCESS, requires_channel: https }
+
+  
+
+        
     providers:
         app_user_provider:
             entity:

@@ -36,7 +36,7 @@ class UserCrudController extends AbstractCrudController
             TextField::new('lastname', 'Nom'),
             TextField::new('firstname', 'Prénom'),   
             TextField::new('password', 'Mot de passe')->setFormType(PasswordType::class)->hideOnIndex(),
-            BooleanField::new('is_verified')->onlyOnIndex(),
+            BooleanField::new('isVerified')->onlyOnIndex(),
         ];
     }
     public function persistEntity(EntityManagerInterface $em, $entityInstance): void

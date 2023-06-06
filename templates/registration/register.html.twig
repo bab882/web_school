@@ -23,6 +23,7 @@
         </div>
         <div class="col-12 mb-2">
             {{ form_row(registrationForm.email) }}
+            
         </div>
         
         <div class="col-12 mb-2">
@@ -35,7 +36,7 @@
             <button type="submit" class="btn col-md-5 m-2">S'inscrire</button>
             {{ form_end(registrationForm) }}
             <button type="submit" id="btn" class="btn col-md-5 m-2">
-                <a href="login.html">Retour</a>
+                <a href="{{ path('app_login')}}">Retour</a>
             </button>
         </div>
         

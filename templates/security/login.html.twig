@@ -9,12 +9,6 @@
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
         
-                {% if app.user %}
-                    <div class="mb-3">
-                        You are logged in as {{ app.user.userIdentifier }}, <a href="{{ path('app_logout') }}">Logout</a>
-                    </div>
-                {% endif %}
-        
                 <h3 class="mb-3 font-weight-normal title">Connectez-vous <br>
                     <span class="sous-title">Pour acceder à votre espace</span>
                 </h3>
@@ -48,11 +42,13 @@
                 #}
 
                 <div class="row g-2 p-3">
-                    <button type="submit" class="btn col-md-5 m-2">Se connecter</button>
+                    <button type="submit" class="btn col-md-5 m-2">
+                        <a href="{{ path('admin') }}">Se connecter</a>
+                        </button>
                     <button type="submit" id="btn" class="btn col-md-5 m-2">
-                        <a href="register.html">S'incrire</a>
+                        <a href="{{ path('app_register')}}">S'incrire</a>
                     </button>
-
+                    <a href="{{ path('app_forgot_password_request') }}" class="link">Mot de passe oublié</a>
                 </div>
             </form>
 </section>
