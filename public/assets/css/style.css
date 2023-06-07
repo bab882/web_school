@@ -569,8 +569,9 @@ body,html {
     color: rgba(248, 161, 36, 1);
     font-size: 4rem;
 }
-.subtitle {
-    font-size: 1rem;
+.about__subtitle {
+    font-size: 20px;
+    color: #e7e7e7 !important;
 }
 .color-overlay {
     position: absolute;
@@ -578,7 +579,7 @@ body,html {
     height: 100%;
     background-color: rgba(1, 17, 64, 0.358);
 }
-@media (max-width: 768px){
+@media screen and (max-width: 768px){
     .banner {
         min-height: 60vh;
     }
@@ -586,7 +587,9 @@ body,html {
         font-size: calc(1.525rem + 3.3vw);
     }
     
+    
 }
+
 /*======================= End Design Cursor ========================*/
 
 /*======================= End Homepage ========================*/
@@ -1064,7 +1067,7 @@ h4 {
     height: 40px;
     width: 40px;
     background: orange;
-    margin: 75px 0;
+    margin: 75px -35px;
     border-radius: 50px;
     list-style-type: none;
     display: flex;
@@ -1075,7 +1078,6 @@ h4 {
 .body__logo li img {
     height: 30px;
     width: 30px;
-    margin-left: -30px;
 }
 .body__content li {
     list-style-type: none;
@@ -1178,8 +1180,9 @@ h4 {
     height: 100vh; 
 }
 #library h3 {
-    font-size: 30px;
+    font-size: 35px;
     font-weight: 900;
+    padding-bottom: 20px;
 }
 .button_lib {
     /* width: 200px; */
@@ -1203,27 +1206,16 @@ h4 {
 
 @media screen and (max-width: 992px){
     #library p {
-        font-size: 13px;
+        font-size: 11px;
         
     }
     #library h3 {
-        background-color: yellow;
         font-size: 25px;
-    }
-}
-@media screen and (min-width: 768px){
-    #library p {
-        font-size: 13px;
-        
-    }
-    #library h3 {
-        background-color: yellow;
-        font-size: 20px;
+        padding-bottom: 0;
     }
 }
 
-
-@media screen and (max-width: 767px)
+@media screen and (max-width: 768px)
 {
     .lib__text p {
         font-size: 16px;
@@ -1232,6 +1224,10 @@ h4 {
     #library h3 {
         /* background-color: green; */
         font-size: 25px;
+    }
+    .reverse {
+        display: flex;
+        flex-direction: column-reverse;
     }
 }
 

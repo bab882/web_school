@@ -6,13 +6,13 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class AboutController extends AbstractController
+class InternatController extends AbstractController
 {
-    #[Route('/a-propos', name: 'app_about')]
+    #[Route('/internat', name: 'app_internat')]
     public function index(): Response
     {
-        return $this->render('about/index.html.twig', [
-            'controller_name' => 'AboutController',
+        return $this->render('internat/index.html.twig', [
+            'controller_name' => 'InternatController',
         ]);
     }
 }

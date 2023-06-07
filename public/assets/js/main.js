@@ -37,7 +37,6 @@ function activateIcon(id) {
   }
 //  End Curseur de la souris
 
-// Auto
 
 
 
