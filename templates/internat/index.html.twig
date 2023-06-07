@@ -1,7 +1,122 @@
-{% extends 'base.html.twig' %}
-
-{% block title %}L'Internat{% endblock %}
-
+{% extends 'base.html.twig' %} 
+{% block title %}C.D.I{% endblock %}
 {% block body %}
+<section class="home__life" id="home__life">
+  <div class="container">
+    <div class="row block__reverse">
+      <div class="col-md-12 col-lg-6">
+        <div class="section__left">
+          <picture id="picture" class="px-5">
+            <img
+              src="{{ asset('assets/img/library.jpg') }}"
+              class="img-fluid"
+              alt=""
+            />
+          </picture>
+        </div>
+      </div>
+      <div class="col-md-12 col-lg-6">
+        <div class="section__right">
+          <h1>L'Internat</h1>
+          <span>
+            Venez découvrir notre espace, rencontrer d'autres élèves passionnés et explorer les multiples ressources à votre disposition.
+          </span>
+          <div class="content__right">
+            <div class="d-inline-flex justify-content-center align-items-baseline">
+              <div class="col-3">
+                <ol class="body__logo ps-5">
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/reading.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/work-space.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                  <li>
+                    <img
+                      src="{{ asset('assets/img/flaticon/reading.png') }}"
+                      class="img-fluid"
+                      alt=""
+                    />
+                  </li>
+                </ol>
+              </div>
+              <div class="col-9">
+                <ol class="body__content">
+                  <li>
+                    <h5>Lecture</h5>
+                    <p>
+                      Nos étagères regorgent de livres, de magazines, de journaux et de documents variés qui couvrent un large éventail de sujets.</p>
+                  </li>
+                  <li>
+                    <h5>Espace</h5>
+                    <p>
+                      C'est un espace dynamique et convivial conçu pour vous accompagner dans votre parcours éducatif et favoriser les rencontres intellectuelles.
+                    </p>
+                  </li>
+                  <li>
+                    <h5>Information</h5>
+                    <p>
+                      A la recherche de ressources pour vos projets scolaires, d'informations pour approfondir vos connaissances ou tout simplement d'un lieu de détente propice à la lecture.
+                    </p>
+                  </li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="library">
+    <div class="container">
+        <div class="row ">
+            <div class="col-md-6">
+                <div class="lib__text">
+                    <h3>Coin lecture</h3>
+                    <p> En poussant les portes du coin lecture, on est immédiatement enveloppé par l'atmosphère calme et sereine qui y règne. Les étagères regorgent de trésors littéraires, offrant un vaste choix de livres de tous genres et pour tous les goûts. Des classiques intemporels aux œuvres contemporaines, en passant par des romans de science-fiction, des polars captivants, des romances envoûtantes et des récits d'aventure palpitants, chaque lecteur y trouve son bonheur.
+                    </p>
+                    
+                </div>
+                
+            </div>
+            <div class="col-md-6  ">
+                <div class="lib__img">
+                    <img src="{{ asset('assets/img/room.jpg')}}" class="img-fluid" alt="espace de lecture">
+                </div>
+            </div>
+
+            
+        </div>
+    </div>  
+
+    <div class="container pb-5">
+        <div class="row reverse">
+            <div class="col-md-6  ">
+                <div class="lib__img">
+                    <img src="{{ asset('assets/img/room.jpg')}}" class="img-fluid align-item-right" alt="espace de lecture">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="lib__text">
+                    <h3>Rencontre</h3>
+                    <p>Le CDI est également un lieu propice aux rencontres et aux échanges. Vous pourrez y retrouver vos camarades de classe pour travailler en groupe, partager des idées ou discuter de vos lectures préférées. Des événements culturels, des conférences et des clubs de lecture sont régulièrement organisés pour enrichir votre expérience au CDI.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+    </div>  
+    
+</section>
 
 {% endblock %}

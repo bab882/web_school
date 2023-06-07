@@ -1082,8 +1082,10 @@ h4 {
 .body__content li {
     list-style-type: none;
     font-size: 15px;
+    margin-left: -100px;
     margin-bottom: 20px;
     color: rgba(1, 17, 64, 0.824);
+    width: 90%;
 }
 .body__content h5 {
     font-size: 20px;
@@ -1092,73 +1094,7 @@ h4 {
 .content__right {
     margin-top: 65px;
 }
-@media screen and (max-width: 767px) {
-    .block__reverse {
-        flex-direction: column-reverse;
-    }
-    .section__left {
-        padding: 30px 0px;
-    }
-    .home__life {
-        padding-top: 80px;
-    }
-    .section__right span {
-        font-size: 15px;
-    }
-    .content__right li {
-        font-size: 13px;
-    }
-    .content__right {
-        margin-top: 0px;
-    }
-    #picture img {
-        width: 80%;
-        height: auto;
-        object-fit: cover;
-    }
-}
-@media (min-width: 769px) and (max-width: 990px){
-    #picture img {
-        width: 90%;
-        height: 600px;
-        object-fit: cover;
-        padding: 40px 100px;
-    }
-    .section__right span {
-        font-size: 15px;
-    }
-    .content__right li {
-        font-size: 14px;
-    }
-    .body__logo li {
-        margin: 60px 0px;
-    }
-    .home__life {
-        padding-top: 60px;
-    }
-    .block__reverse {
-        flex-direction: column-reverse;
-    }
-}
-@media screen and (min-width: 992px) {
-    #picture img {
 
-        height: 535px;
-
-    }
-    .body__content li {
-        font-size: 13px;
-    }
-    .section__right h1 {
-        margin-top: 25px;
-    }
-    .section__right span {
-        font-size: 15px;
-    }
-    .content__right {
-        margin-top: 0px;
-    }
-} 
 #library {
     height: auto;
     width: 100%;
@@ -1203,33 +1139,125 @@ h4 {
     color: rgba(248, 160, 36, 1);
     box-shadow: none;   
 }
-
-@media screen and (max-width: 992px){
-    #library p {
-        font-size: 11px;
-        
-    }
-    #library h3 {
-        font-size: 25px;
-        padding-bottom: 0;
-    }
-}
-
-@media screen and (max-width: 768px)
-{
-    .lib__text p {
-        font-size: 16px;
-        font-size: bold;
-    }
-    #library h3 {
-        /* background-color: green; */
-        font-size: 25px;
-    }
-    .reverse {
-        display: flex;
+@media screen and (max-width: 768px) {
+    .block__reverse {
         flex-direction: column-reverse;
     }
+    .section__left {
+        padding: 30px 0px;
+    }
+    .home__life {
+        padding-top: 80px;
+    }
+    .section__right span {
+        font-size: 15px;
+    }
+    .content__right li {
+        font-size: 13px;
+    }
+    .content__right {
+        margin-top: 0px;
+    }
+    #picture img {
+        width: 80%;
+        height: auto;
+        object-fit: cover;
+        margin: 0 -13px;
+    }
+    .lib__text p {
+        font-size: 13px;
+    }
+    .body__content li {
+        list-style-type: none;
+        font-size: 13px;
+        margin-left: -30px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    .body__content h5 {
+        font-size: 18px;
+    }
+    .body__logo li {
+        margin: 100px -35px;
+    }
+    .reverse {
+        margin-top: -35px;
+    }
 }
+@media (min-width: 769px) and (max-width: 990px){
+    #picture img {
+        width: 90%;
+        height: 600px;
+        object-fit: cover;
+        padding: 40px 100px;
+    }
+    .section__right span {
+        font-size: 15px;
+    }
+    .content__right li {
+        font-size: 14px;
+    }
+    .content__right {
+        margin-top: 50px;
+    }
+    .body__logo li {
+        margin: 60px 0px;
+    }
+    .home__life {
+        padding-top: 60px;
+    }
+    .block__reverse {
+        flex-direction: column-reverse;
+    }
+    .lib__text p {
+        font-size: 12px;
+    }
+    #library h3 {
+        font-size: 20px;
+        padding-bottom: 0;
+    }
+    
+    .body__content li {
+        font-size: 13px;
+        margin-left: -60px;
+        margin-bottom: 20px;
+        width: 90%;
+    }
+}
+@media screen and (min-width: 992px) {
+    #picture img {
+
+        height: 535px;
+
+    }
+    .body__content li {
+        font-size: 13px;
+    }
+    .section__right h1 {
+        margin-top: 25px;
+    }
+    .section__right span {
+        font-size: 15px;
+    }
+    .content__right {
+        margin-top: 0px;
+    }
+    .body__content li {
+        font-size: 13px;
+        margin-left: -70px;
+        margin-bottom: 20px;
+        width: 100%;
+    }
+    #library h3 {
+        font-size: 35px;
+        font-weight: 900;
+        padding-bottom: 20px;
+    }
+    #library {
+        margin-top: 30px;
+    }
+} 
+
 
 
 
@@ -1366,7 +1394,7 @@ h4 {
 
 
 
-/*======================== Auth ========================*/
+/*======================== Start Auth ========================*/
 .auth{
     background-image: url('../img/login.jpg');
     background-size: 60vw 100vh;
