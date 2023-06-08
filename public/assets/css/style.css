@@ -1094,7 +1094,14 @@ h4 {
 .content__right {
     margin-top: 65px;
 }
+.check ol{
+    list-style-type: none;
 
+
+}
+.color-check {
+    color: #09aa09;
+}
 #library {
     height: auto;
     width: 100%;
