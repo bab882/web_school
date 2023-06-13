@@ -109,12 +109,19 @@ body {
     border: none;
     border-radius: 50px;
 }
+
 .login:hover {
     background-color: transparent;
     color: rgba(248, 160, 36, 1) !important;
     border: 1px solid rgba(248, 160, 36, 1);
     border-radius: 100px !important;
     
+}
+dl,
+ol,
+ul {
+ margin-top:0;
+ margin-bottom: 5px!important;
 }
 .burger,.menu-mb,input {
     display: none;
@@ -269,27 +276,27 @@ body {
     background-size: cover;                              
 }
 .cards:nth-child(2):hover {
-    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/formations.jpg');
+    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/commerce.jpg');
                                                                        
     background-size: cover;                              
 }
 .cards:nth-child(3):hover {
-    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/formations.jpg');
+    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/vendeuse.jpg');
                                                                        
     background-size: cover;                              
 }
 .cards:nth-child(4):hover {
-    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/formations.jpg');
+    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/equipier.jpg');
                                                                        
     background-size: cover;                              
 }
 .cards:nth-child(5):hover {
-    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/formations.jpg');
+    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/gestion.jpg');
                                                                        
     background-size: cover;                              
 }
 .cards:nth-child(6):hover {
-    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/formations.jpg');
+    background:linear-gradient(45deg,rgba(1, 17, 64, 0.6) 0%, rgba(1, 17, 64, 0.9) 100%), url('../img/reception.jpg');
                                                                        
     background-size: cover;                              
 }
@@ -809,10 +816,26 @@ body,html {
     margin-top: -30px;
 }
 .contact__card input {
-    color: yellow;
-}
+    color: yellow;border: 1px solid 
+    rgba(151, 151, 159, 0.192);
+    color: rgba(0, 0, 0, 0.57);
+} 
+
 .contact__card input:focus {
-    color: rgba(1, 17, 64, 1);
+    color: black;
+    border-color: rgba(248, 161, 36, 1);
+    box-shadow: 0 0 0 .05rem rgba(248, 161, 36, 1);
+}
+.contact__card textarea {
+    color: yellow;border: 1px solid 
+    rgba(151, 151, 159, 0.192);
+    color: rgba(0, 0, 0, 0.57);
+} 
+
+.contact__card textarea:focus {
+    color: black;
+    border-color: rgba(248, 161, 36, 1);
+    box-shadow: 0 0 0 .05rem rgba(248, 161, 36, 1);
 }
 .contact__number {
     margin-top: -20px;
@@ -892,12 +915,12 @@ body,html {
     .contact__card {
         position: relative;
         margin: auto;
-        width: 70%;
+        width: 100%;
         margin-top: 60px;
         height: 500px;
     }
     .contact__card input {
-        font-size: 10px;
+        font-size: 9px;
     }
     .contact__card textarea {
         font-size: 10px;
@@ -976,7 +999,7 @@ body,html {
     }
     .contact__card {
         margin-left: 200px;
-        width: 60%;
+        width: 50%;
     }
 }
 
@@ -1096,8 +1119,6 @@ h4 {
 }
 .check ol{
     list-style-type: none;
-
-
 }
 .color-check {
     color: #09aa09;
@@ -1437,12 +1458,12 @@ h4 {
     font-weight: 500;
     color: #e7e7e7b7;
 }
-.form-control{
+.input-color{
     background: rgba(151, 151, 159, 0.084) !important;
     border: 1px solid rgba(151, 151, 159, 0.084) !important;
     color: #e7e7e7 !important;
 }
-.form-control:focus{
+.input-color:focus{
     border-color: rgba(248, 161, 36, 1) !important;
     box-shadow: 0 0 0 .05rem rgba(248, 161, 36, 1) !important;
 }
