@@ -8,8 +8,6 @@
 
 <!-- Start Header -->
     <header class="header">
-        
-        <!-- Start Banner -->
         <div class="banner" style="background-image: url('.{{ asset('assets/img/viviani.png')}}');">
             <div class="color-overlay d-flex justify-content-center align-items-center">
                 <div class="container">
@@ -20,14 +18,11 @@
                             à vous dans le secteur des services aux entreprises et aux administrations. <br>
                             Ensemble, nous construirons votre avenir professionnel.
                         </p>
+                        <a href="{{ path('app_about')}}" class="btn btn__about  d-flex justify-content-center">A Propos</a>
                     </div>
                 </div>   
-            </div>
-            
-            <a href="#" class="btn btn-primary">A Propos</a>
-            
+            </div>        
         </div>
-        <!-- End Banner -->
     </header>
     <!-- End Header -->
 
@@ -161,7 +156,7 @@
                         <p> Dans l'ensemble, l'internat peut offrir aux élèves une expérience unique et enrichissante, leur permettant 
                             de vivre et de travailler ensemble dans un environnement communautaire et stimulant.
                         </p>
-                        <a href="#" class="btn btn-primary btn-sm mx-auto button_lib mb-5">En savoir +</a>
+                        <a href="{{ path('app_internat')}}" class="btn btn-primary btn-sm mx-auto button_lib mb-5">En savoir +</a>
                     </div>    
                 </div>
             </div>
@@ -179,7 +174,7 @@
                         <p class="style"> Si vous avez des questions, des commentaires ou si vous souhaitez tout simplement discuter avec nous, 
                             n'hésitez pas à nous contacter. Notre équipe dévouée est là pour vous aider et répondre à tous vos besoins.
                         </p>
-                        <a href="#" class="btn btn-primary  mx-auto button_lib mb-5">Nous écrire</a>
+                        <a href="{{ path('app_contact')}}" class="btn btn-primary  mx-auto button_lib mb-5">Nous écrire</a>
                     </div>
                     
                 </div>

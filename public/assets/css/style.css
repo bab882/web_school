@@ -23,7 +23,7 @@ body {
 }
 .menu .logo {
     float: left;
-    color: yellow;
+    color: #e7e7e7;
     font-size: 27px;
     font-weight: 600;
     line-height: 70px;
@@ -41,7 +41,7 @@ body {
     background: rgba(1, 17, 64, 1);
     margin: 0 5px;
 }
-.menu ul li:hover > ul {
+.menu ul li:hover:active > ul {
     opacity: 1;
     visibility: visible;
     top: 70px;
@@ -196,6 +196,10 @@ ul {
 /*======================= Start Homepage ========================*/
 #main {
     background-color: aqua;
+}
+.btn__about {
+    width: 10%;
+    margin-left: 10px;
 }
 #course {
    

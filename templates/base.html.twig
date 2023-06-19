@@ -98,14 +98,23 @@
         crossorigin="anonymous"></script>
 
 	    <script>
+			// Elément cible où le texte sera affiché avec l'effet d'auto-typing
 			let typed = new Typed('.auto-typing', {
+			// Texte à afficher 
 			strings: ['Lycée Viviani'],
+			// Vitesse de frappe
 			typeSpeed: 100,
+			// Vitesse de retour en arrière
 			backSpeed: 100,
+			// Défini si l'élément doit tourner en boucle
 			loop: true,
+			// Si le texte doit se dissiper progressivement lorsqu'il est effacé
 			fadeOut: true,
+			// Défini la class qui sera ajoutée à l'élément lorsqu'il se dissipe progressivement
 			fadeOutClass: 'typed-fade-out',
+			// Le temps que le texte restera affiché
 			fadeOutDelay: 500,
+			// Les chaînes de carctères seront affichées dans un ordre aléatoire
 			shuffle: true,
 		});
 		</script>
