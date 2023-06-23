@@ -33,6 +33,13 @@ class Category
     #[ORM\OneToMany(mappedBy: 'parent', targetEntity: self::class)]
     private Collection $categories;
 
+    #[ORM\Column(length: 255)]
+    private ?string $Slug = null;
+
+    public function __toString()
+    {
+        return $this->name;
+    }
     public function __construct()
     {
         $this->categories = new ArrayCollection();
@@ -132,6 +139,18 @@ class Category
                 $category->setParent(null);
             }
         }
+
+        return $this;
+    }
+
+    public function getSlug(): ?string
+    {
+        return $this->Slug;
+    }
+
+    public function setSlug(string $Slug): static
+    {
+        $this->Slug = $Slug;
 
         return $this;
     }

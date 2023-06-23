@@ -34,8 +34,7 @@ class DashboardController extends AbstractDashboardController
         // Je vais gerer un url depuis adminUrlGenerator
         $url = $this->adminUrlGenerator
             ->setController(UserCrudController::class)
-            ->generateUrl();
-        
+            ->generateUrl(); 
         return $this->redirect($url);
     }
 
@@ -43,10 +42,7 @@ class DashboardController extends AbstractDashboardController
     {
         return Dashboard::new()
             ->setTitle('Viviani - Administration')
-            ->renderContentMaximized();
-            
-            
-            
+            ->renderContentMaximized();         
     }
 
     public function configureMenuItems(): iterable
@@ -57,37 +53,32 @@ class DashboardController extends AbstractDashboardController
             MenuItem::linkToCrud('Créer', 'fas fa-plus', Articles::class)->setAction(Crud::PAGE_NEW)   
         ]);
         yield MenuItem::subMenu('Blog', 'fas fa-newspaper text-light')->setSubItems([
-            MenuItem::linkToCrud('Liste', 'fas fa-eye', Blog::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', Blog::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')   
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', Blog::class)->setPermission('ROLE_ADMIN'),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Blog::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')   
         ]);
 
         yield MenuItem::subMenu('Catégories', 'fas fa-folder text-primary')->setSubItems([
-            MenuItem::linkToCrud('Liste', 'fas fa-eye', Category::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', Category::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', Category::class)->setPermission('ROLE_ADMIN'),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Category::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')
             
         ]);
 
         yield MenuItem::subMenu('Formations', 'fas fa-book text-primary')->setSubItems([
-            MenuItem::linkToCrud('Liste', 'fas fa-eye', Services::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', Services::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')  
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', Services::class)->setPermission('ROLE_ADMIN'),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Services::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')  
         ]);
         yield MenuItem::subMenu('Galerie', 'fas fa-images text-primary')->setSubItems([
             MenuItem::linkToCrud('Liste', 'fas fa-eye', Gallery::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', Gallery::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')  
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Gallery::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')  
         ]);
         yield MenuItem::subMenu('Utilisateurs', 'fas fa-user text-primary')->setSubItems([
-            MenuItem::linkToCrud('Liste', 'fas fa-eye', User::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')   
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', User::class)->setPermission('ROLE_ADMIN'),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', User::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')   
         ]);
         yield MenuItem::subMenu('Diplomes', 'fas fa-graduation-cap text-primary')->setSubItems([
-            MenuItem::linkToCrud('Liste', 'fas fa-eye', Diplome::class)->setPermission('ROLE_SUPER_ADMIN'),
-            MenuItem::linkToCrud('Créer', 'fas fa-plus', Diplome::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_SUPER_ADMIN')   
+            MenuItem::linkToCrud('Liste', 'fas fa-eye', Diplome::class)->setPermission('ROLE_ADMIN'),
+            MenuItem::linkToCrud('Créer', 'fas fa-plus', Diplome::class)->setAction(Crud::PAGE_NEW)->setPermission('ROLE_ADMIN')   
         ]);
         yield MenuItem::linkToRoute('Retour à l\'Accueil', 'fas fa-home', 'app_main');
-   
-       
-
-        // yield MenuItem::
-        // yield MenuItem::linkToCrud('The Label', 'fas fa-list', EntityClass::class);
     }    
 }

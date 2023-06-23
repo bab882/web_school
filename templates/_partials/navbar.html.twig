@@ -1,92 +1,52 @@
-<nav class="menu">
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">VIVIANI</a>
+      <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+        <div class="hamburger-toggle">
+          <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+      </button>
+      <div class="collapse navbar-collapse" id="navbar-content">
         
-        <div class="logo">VIVIANI</div> 
-        <label class="menu-mb" for="btn">
-            <span class="fa fa-bars-staggered"></span>
-        </label>
-        <input type="checkbox" id="btn">
-           
-            <ul>
-                <li>
-                    <a href="{{ path('app_main') }}">HOME</a>
-                </li>
-                
-                <li>
-                    
-                        
-                        
-                    
-                    <label for="btn-1" class="burger">LE LYCÉE</label>
-                    
-                    <a href="#">LE LYCÉE</a>
-                    
-                    <input type="checkbox" id="btn-1">
-                    <ul>
-                        <li><a href="{{ path('app_news') }}">Actualité</a></li>
-                        <li><a href="{{ path('app_about') }}">A Propos</a></li>
-                        <li><a href="{{ path('app_gallery') }}">Galerie</a></li>
-                    </ul>
-                    
-                </li>
-                <li>
-                    <label for="btn-2" class="burger">FORMATIONS</label>
-                    <a href="#">FORMATIONS</a>
-                    <input type="checkbox" id="btn-2">
-                    <ul>
-                        <li>
-                            <label for="btn-3" class="burger">Cap</label>
-                            <a href="#">Cap</a>
-                            <input type="checkbox" id="btn-3">
-                        <ul>
-                            <li><a href="#">Logistique</a></li>
-                            <li><a href="#">Equipier Polyvalent</a></li>
-                        </ul>
-                        </li>
-                        <li>
-                            <label for="btn-4" class="burger">Bac Pro</label>
-                            <a href="#">Bac Pro</a>
-                            <input type="checkbox" id="btn-4">
-                            <ul>
-                                <li><a href="#">Commerce</a></li>
-                                <li><a href="#">Vente</a></li>
-                                <li><a href="#">Logistique</a></li>
-                                <li><a href="#">Assitance  à la gestion</a></li>
-                                <li><a href="#">Métier d'acceuil</a></li>
-                                <li><a href="#">Mention Complémentaire</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">U.L.I.S</a>
-                        <li><a href="#">Section Euro</a>
-                        <li><a href="#">UP2A</a>
-                        <li><a href="#">UF2S</a>
-                    </ul>
-                </li>
-                <li>
-                    <label for="btn-5" class="burger">VIE AU LYCÉE</label>
-                    <a href="#">VIE AU LYCÉE </a>
-                    <input type="checkbox" id="btn-5">
-                    <ul>
-                        <li><a href="{{ path('app_library') }}">C.D.I</a></li>
-                        <li><a href="{{ path('app_internat') }}">Internat</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <label for="btn-6" class="burger">APPRENTISSAGE</label>
-                    <a href="#">APPRENTISSAGE</a>
-                    <input type="checkbox" id="btn-6">
-                    <ul>
-                        <li><a href="#">Apprentis</a></li>
-                        <li><a href="#">Formation Continue</a></li>
-                    </ul>
-                </li>
-                <li>
-                    <a href="{{ path('app_contact') }}" class="contact"><i class="fa-solid fa-envelope"></i> Contact</a>
-                </li>
-                <li>
-                    <a href="https://cas.monbureaunumerique.fr/login" class="login"><i class="fa-solid fa-user"></i> Connecter</a>
-                </li>
-                
-            </ul>
-            
+        <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="{{ path('app_main')}}">Home</a>
+          </li>
+       
+          {{dump(categories)}} 
+          <!-- Start partie 1 -->
+          {% for category in categories %}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">{{ category.name }}</a>
+            {% if category.parent is not %}
+                <ul class="dropdown-menu shadow">
+                <li><a class="dropdown-item" href="#">tyty</a></li>
+                <li><a class="dropdown-item" href="blog.html"></a></li>     
+                <li><hr class="dropdown-divider"></li>
+                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                </ul>
+            {% endif %}
+          </li>
+          <!-- End partie 1 -->
+        {% endfor %} 
+         <!-- Partie 2 -->
         
-    </nav>
+          <!-- fin 2 -->
+         
+        </ul>
+        
+       <a class="navbar-brand" href="{{ path('app_contact')}}"><i class="fa-solid fa-envelope"></i>Contact</a>
+       <a class="navbar-brand" href="https://cas.monbureaunumerique.fr/login"><i class="fa-solid fa-user"></i> Connecter</a>
+      </div>
+    </div>
+  </nav>
+  <script>document.addEventListener('click',function(e){
+    // Hamburger menu
+    if(e.target.classList.contains('hamburger-toggle')){
+      e.target.children[0].classList.toggle('active');
+    }
+  })</script>

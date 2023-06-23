@@ -31,12 +31,6 @@ security:
         # Intercepter toutes les autres URL
         - { path: '^/', roles: PUBLIC_ACCESS, requires_channel: https }
 
-  
-
-        
-
-       
-
 when@test:
     security:
         password_hashers:
