@@ -8,7 +8,7 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class NewsController extends AbstractController
 {
-    #[Route('/actualités', name: 'app_news')]
+    #[Route('/actualite', name: 'app_news')]
     public function index(): Response
     {
         return $this->render('news/index.html.twig', [

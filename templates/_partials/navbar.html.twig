@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+<nav class="navbar navbar-expand-lg shadow ">
     <div class="container-fluid">
       <a class="navbar-brand" href="#">VIVIANI</a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
@@ -17,25 +17,37 @@
             <a class="nav-link active" aria-current="page" href="{{ path('app_main')}}">Home</a>
           </li>
        
-          {{dump(categories)}} 
+         
           <!-- Start partie 1 -->
           {% for category in categories %}
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" data-bs-auto-close="outside">{{ category.name }}</a>
-            {% if category.parent is not %}
+            {% set dropdown =  category.categories|length %}
+            <a class="nav-link " href="#" {% if dropdown != '0' %} data-bs-toggle="dropdown" data-bs-auto-close="outside"{% endif %} >{{ category.name }} </a>
+           
+         
                 <ul class="dropdown-menu shadow">
-                <li><a class="dropdown-item" href="#">tyty</a></li>
-                <li><a class="dropdown-item" href="blog.html"></a></li>     
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  {% for item in category.categories %}
+                  <li>
+                    <li class="dropend">
+                      {% set drop =  item.categories|length %}
+                      <a href="/{{ item.Slug }}" class="dropdown-item" {% if drop != '0' %} data-bs-toggle="dropdown" data-bs-auto-close="outside"  {% endif %}>{{ item.name }} </a>
+                      
+                     {% if drop != '0' %}
+                      <ul class="dropdown-menu shadow">   
+                        {% for list in item.categories %} 
+                          <li><a class="dropdown-item" href="/{{ list.Slug }}">{{ list.name }}</a></li>
+                        {% endfor %}
+                      </ul>
+                      {% endif %}
+                      
+                  </li>
+                 {% endfor %}
                 </ul>
-            {% endif %}
+       
           </li>
           <!-- End partie 1 -->
         {% endfor %} 
-         <!-- Partie 2 -->
         
-          <!-- fin 2 -->
          
         </ul>
         

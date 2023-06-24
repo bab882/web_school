@@ -51,24 +51,6 @@ class CategoryRepository extends ServiceEntityRepository
         ;
     }
 
-    public function levelun($items0): array
-    {
-        return $this->createQueryBuilder('c')
-                ->andWhere('c.parent  = :val')
-                ->setParameter('val', $items0)
-                ->getQuery()
-                ->getResult()
-        ;
-    }
     
-    public function leveldeux($items1): array
-    {
-        return $this->createQueryBuilder('c')
-                ->andWhere('c.parent  = :val')
-                ->setParameter('val', $items1)
-                ->getQuery()
-                ->getResult()
-        ;
-    }
     
 }

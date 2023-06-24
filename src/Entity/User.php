@@ -22,7 +22,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, TwoFact
     private ?string $email = null;
 
     #[ORM\Column]
-    private array $roles = ['ROLE_USER'];
+    private array $roles = ['ROLE_ADMIN'];
 
     #[ORM\Column(type: 'string', nullable: true)]
     private ?string $authCode = null;
