@@ -31,7 +31,7 @@ class ChangePasswordFormType extends AbstractType
                         ]),
                         // https://www.cnil.fr/fr/mots-de-passe-une-nouvelle-recommandation-pour-maitriser-sa-securite
                         new Regex([
-                            'pattern' => '/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{14,}$/',
+                            'pattern' => '/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{14,}$/',
                             'message' => 'Votre mot de passe doit contenir au moins 1majuscule, 1minuscule, 1 chiffre et 1 carctère spécial',
                         ]),
                     ],

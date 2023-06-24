@@ -18,22 +18,25 @@ security:
                 path: app_logout
                 target: app_login
 
-            two_factor:
-                auth_form_path: 2fa_login # The route name you have used in the routes.yaml
-                check_path: 2fa_login_check # The route name you have used in the routes.yaml
-                #trusted_parameter_name: _trusted # Name of the parameter for the trusted device option
-
+       
             login_throttling:
                 max_attempts: 3
                 interval: '60 minutes'
 
+            two_factor:
+                auth_form_path: 2fa_login # The route name you have used in the routes.yaml
+                check_path: 2fa_login_check # The route name you have used in the routes.yaml
+                trusted_parameter_name: _trusted # Name of the parameter for the trusted device option
 
 
     access_control:
         - { path: '^/admin', roles: ROLE_ADMIN, requires_channel: '%env(SECURE_SCHEME)%', methods: [GET, PUT, DELETE, POST] }
-        - { path: '^/hjhjhj', roles: ROLE_USER }
         # Intercepter toutes les autres URL
         - { path: '^/', roles: PUBLIC_ACCESS, requires_channel: https }
+    
+
+              
+
 
 when@test:
     security:

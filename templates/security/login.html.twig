@@ -1,8 +1,10 @@
 {% extends 'base.html.twig' %}
 {% block title %}Connexion{% endblock %}
 {% block body %}
+
+
 <section class="container-fluid auth">
-            <form action="{{ path('app_login') }}" method="post" class="input col-md-3 right">
+            <form method="post" class="input col-md-3 right">
                 {% if error %}
                     <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
                 {% endif %}
@@ -35,8 +37,8 @@
                 #}
                 <div class="row g-2 p-3">
                     <button type="submit" class="btn col-md-5 m-2">
-                        <a href="{{ path('admin') }}">Se connecter</a>
-                        </button>
+                        Se connecter
+                    </button>
                     <button type="submit" id="btn" class="btn col-md-5 m-2">
                         <a href="{{ path('app_register')}}">S'incrire</a>
                     </button>
