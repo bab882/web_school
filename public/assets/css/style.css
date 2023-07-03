@@ -9,83 +9,53 @@ body {
 nav {
     background: rgba(1, 17, 64, 1);
 }
+.navbar {
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    z-index: 99;
+}
 .nav-link {
     color: #e7e7e7;
-    font-weight: 700;
+    font-weight: 500;
     font-size: 20px;
 }
 .nav-link:hover {
     color: rgba(248, 160, 36, 1);
     
 }
-
-
-
-@media screen and (max-width: 992px) {
-    .menu ul {
-        margin-right: 0;
-        float: left;
-    }
-    .menu .logo {
-        padding-left: 30px;
-        width: 100%;
-    }
-    .menu ul li, .menu ul ul li {
-        display: block;
-        width: 100%;
-        border: none;
-    }
-    .menu ul ul:focus {
-        top: 70px;
-        position: static;
-        border-top: none;
-        float: none;
-        display: none;
-        opacity: 1;
-        visibility: visible; 
-    }
-    .menu ul ul ul li {
-        position: static;
-    }
-    .menu ul ul ul a {
-        padding-left: 80px;
-    }
-    .burger {
-        display: block;
-        color: #e7e7e7;
-        font-size: 18px;
-        padding: 0 20px;
-        line-height: 70px;
-        cursor: pointer;
-    }
-    .burger:hover {
-        color: rgba(248, 160, 36, 1);
-    }
-    .menu-mb {
-       display: block; 
-       color: #e7e7e7;
-       position: absolute;
-       right: 40px;
-       line-height: 70px;
-       font-size: 25px;
-       cursor: pointer;
-    }
-    .menu ul li a:hover {
-        box-shadow: none;
-    }
-    .burger + a, ul {
-        display: none;
-    }
-    [id^=btn]:checked + ul {
-        display: block;
-    }
+.navbar-toggler-icon {
+    color: red;
 }
-@media  screen and (max-width: 1200px) {
-    .menu ul li a {
-        font-size: 15px;
-        padding: 5px 5px;
-    }
+.navbar-toggler {
+    color: transparent;
+    border: none;
 }
+.navbar-brand i:hover {
+    color: rgba(248, 160, 36, 1);
+}
+.show {
+    background: rgba(1, 17, 64, 1);
+    border: none;
+    border-radius: 0;
+}
+.show:focus {
+    background: transparent;
+    color: rgba(248, 160, 36, 1);
+}
+.dropdown-item {
+    color: #e7e7e7;
+    background: transparent;
+}
+.dropdown-item:hover {
+    color: rgba(248, 160, 36, 1);
+    background: transparent;
+}
+.nav-link:focus {
+    color: rgba(248, 160, 36, 1);
+    background: transparent;
+}
+
 /*======================= End Navbar ========================*/
 
 /*======================= Start Homepage ========================*/
