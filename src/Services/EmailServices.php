@@ -19,7 +19,7 @@ class EmailServices
     {
         $email = (new TemplatedEmail())
             ->from($form->get('email')->getData())
-            ->to('no-reply@viaviani.fr')
+            ->to('no-reply@viviani.fr')
             ->replyTo($form->get('email')->getData())
             ->priority(Email::PRIORITY_HIGH)
             ->subject('Nouveau message')

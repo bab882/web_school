@@ -182,6 +182,7 @@ class User implements UserInterface, PasswordAuthenticatedUserInterface, TwoFact
 
         return $this;
     }
+    
     public function isEmailAuthEnabled(): bool
     {
         return true; // This can be a persisted field to switch email code authentification on/off

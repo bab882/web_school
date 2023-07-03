@@ -1,37 +1,29 @@
 <nav class="navbar navbar-expand-lg shadow ">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">VIVIANI</a>
+      <a class="navbar-brand text-light" href="#">VIVIANI</a>
       <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
-        <div class="hamburger-toggle">
-          <div class="hamburger">
-            <span></span>
-            <span></span>
-            <span></span>
-          </div>
-        </div>
+        <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbar-content">
-        
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{ path('app_main')}}">Home</a>
-          </li>
-       
-         
-          <!-- Start partie 1 -->
+            <a class="nav-link " aria-current="page" href="{{ path('app_main')}}">HOME</a>
+          </li> 
+          <!-- Itérations sur la collection Categories -->
           {% for category in categories %}
           <li class="nav-item dropdown">
+            <!-- Compte le nombre de sous category -->
             {% set dropdown =  category.categories|length %}
+            <!-- Permet d'affiche le nombre sous category  -->
             <a class="nav-link " href="#" {% if dropdown != '0' %} data-bs-toggle="dropdown" data-bs-auto-close="outside"{% endif %} >{{ category.name }} </a>
-           
-         
                 <ul class="dropdown-menu shadow">
+                  <!-- Itération de la sous categories -->
                   {% for item in category.categories %}
                   <li>
                     <li class="dropend">
+                      <!-- Affiche si la sous categories a d'autre sous catégories -->
                       {% set drop =  item.categories|length %}
-                      <a href="/{{ item.Slug }}" class="dropdown-item" {% if drop != '0' %} data-bs-toggle="dropdown" data-bs-auto-close="outside"  {% endif %}>{{ item.name }} </a>
-                      
+                      <a href="/{{ item.Slug }}" class="dropdown-item" {% if drop != '0' %} data-bs-toggle="dropdown" data-bs-auto-close="outside"  {% endif %}>{{ item.name }} </a>           
                      {% if drop != '0' %}
                       <ul class="dropdown-menu shadow">   
                         {% for list in item.categories %} 
@@ -39,26 +31,15 @@
                         {% endfor %}
                       </ul>
                       {% endif %}
-                      
                   </li>
                  {% endfor %}
                 </ul>
-       
           </li>
-          <!-- End partie 1 -->
         {% endfor %} 
-        
-         
         </ul>
-        
-       <a class="navbar-brand" href="{{ path('app_contact')}}"><i class="fa-solid fa-envelope"></i>Contact</a>
-       <a class="navbar-brand" href="https://cas.monbureaunumerique.fr/login"><i class="fa-solid fa-user"></i> Connecter</a>
+       <a class="navbar-brand contact text-light" href="{{ path('app_contact')}}"><i class="fa-solid fa-envelope"></i></a>
+       <a class="navbar-brand text-light" href="https://cas.monbureaunumerique.fr/login"><i class="fa-solid fa-user"></i></a>
       </div>
     </div>
   </nav>
-  <script>document.addEventListener('click',function(e){
-    // Hamburger menu
-    if(e.target.classList.contains('hamburger-toggle')){
-      e.target.children[0].classList.toggle('active');
-    }
-  })</script>
+  

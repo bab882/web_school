@@ -6,126 +6,21 @@ body {
     height: 100%;
 }
 /*======================= Start Navbar ========================*/
-.menu {
-    background-color: rgba(1, 17, 64, 1);
-    font-family: 'Nunito', sans-serif;
-    text-decoration: uppercase;
-    width: 100%;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-}
-
-.menu::after {
-    content: '';
-    clear: both;
-    display: table;
-}
-.menu .logo {
-    float: left;
-    color: #e7e7e7;
-    font-size: 27px;
-    font-weight: 600;
-    line-height: 70px;
-    padding-left: 60px;
-}
-.menu ul {
-    float: right;
-    list-style: none;
-    margin-right: 40px;
-    position: relative;
-}
-.menu ul li {
-    float: left;
-    display: inline-block;
+nav {
     background: rgba(1, 17, 64, 1);
-    margin: 0 5px;
 }
-.menu ul li:hover:active > ul {
-    opacity: 1;
-    visibility: visible;
-    top: 70px;
-}
-.menu ul li a {
+.nav-link {
     color: #e7e7e7;
-    text-decoration: none;
-    line-height: 70px;
-    font-size: 18px;
-    padding: 8px 15px;
+    font-weight: 700;
+    font-size: 20px;
 }
-.menu ul li a:hover {
+.nav-link:hover {
     color: rgba(248, 160, 36, 1);
-    border-radius: 5px;
-    box-shadow: 0 0 5px rgba(248, 160, 36, 0.708),
-                        rgba(248, 160, 36, 0.708);
-}
-.menu ul ul {
-    position: absolute;
-    top: 90px;
-    opacity: 0;
-    visibility: hidden;
-    transition: top .3s;
-}
-.menu ul ul li {
-    position: relative;
-    margin: 0;
-    width: 250px;
-    float: none;
-    display: list-item;
-    border-bottom: 1px solid rgba(98, 134, 243, 0.445);
-}
-.menu ul ul ul li {
-   position: relative;
-   top: -70px;
-   left: 150px;
-   border-top: none;
-}
-.menu ul ul ul {
-    border-top: none;
-}
-.menu ul ul li a {
-    line-height: 50px;
-    font-size: 15px;
-}
-.menu ul ul li a:hover {
-    color: rgba(248, 160, 36, 1);
-    box-shadow: none;
-}
-.contact {
-    color: rgba(248, 160, 36, 1) !important;
-    border: 1px solid rgba(248, 160, 36, 1);
-    border-radius: 50px;
-}
-.contact:hover {
-    background-color: rgba(248, 160, 36, 1);
-    color: rgba(1, 17, 64, 1) !important;
-    border: none;
-    border-radius: 100px !important;
-}
-.login {
-    background-color: rgba(248, 160, 36, 1);
-    font-size: 10px;
-    color: rgba(1, 17, 64, 0.75) !important;
-    border: none;
-    border-radius: 50px;
-}
-
-.login:hover {
-    background-color: transparent;
-    color: rgba(248, 160, 36, 1) !important;
-    border: 1px solid rgba(248, 160, 36, 1);
-    border-radius: 100px !important;
     
 }
-dl,
-ol,
-ul {
- margin-top:0;
- margin-bottom: 5px!important;
-}
-.burger,.menu-mb,input {
-    display: none;
-}
+
+
+
 @media screen and (max-width: 992px) {
     .menu ul {
         margin-right: 0;
@@ -391,11 +286,17 @@ ul {
         flex-direction: column;
         align-items: center;
     }
+    .btn__about {
+        width: 30%;
+    }
 }
 @media screen and (min-width:768px){
     #news h2 {
         font-size: 30px;
         font-weight: 700;
+    }
+    .btn__about {
+        width: 15%;
     }
     
 }

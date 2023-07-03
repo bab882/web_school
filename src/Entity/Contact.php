@@ -19,7 +19,6 @@ class Contact
     {
         return $this->nom;
     }
-
     /**
      * @param mixed $nom
      * @return Contact

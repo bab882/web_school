@@ -24,7 +24,6 @@ class CategoryRepository extends ServiceEntityRepository
     public function save(Category $entity, bool $flush = false): void
     {
         $this->getEntityManager()->persist($entity);
-
         if ($flush) {
             $this->getEntityManager()->flush();
         }
@@ -38,7 +37,6 @@ class CategoryRepository extends ServiceEntityRepository
             $this->getEntityManager()->flush();
         }
     }
-
     /**
      * return array
      */
@@ -50,7 +48,4 @@ class CategoryRepository extends ServiceEntityRepository
                 ->getResult()
         ;
     }
-
-    
-    
 }

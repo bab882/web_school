@@ -20,15 +20,14 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ArticlesCrudController extends AbstractCrudController
 {
-    
-        public const ACTION_DUPLICATE = 'duplicate';
-        public const ARTICLES_BASE_PATH = 'assets/img/articles';
-        public const ARTICLES_UPLOAD_DIR = 'public/assets/img/articles';
+    public const ACTION_DUPLICATE = 'duplicate';
+    public const ARTICLES_BASE_PATH = 'assets/img/articles';
+    public const ARTICLES_UPLOAD_DIR = 'public/assets/img/articles';
         
-        public static function getEntityFqcn(): string
-        {
-            return Articles::class;
-        }
+    public static function getEntityFqcn(): string
+    {
+        return Articles::class;
+    }
 
     public function configureActions(Actions $actions): Actions
     {
